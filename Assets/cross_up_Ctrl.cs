@@ -7,10 +7,14 @@ public class cross_up_Ctrl : MonoBehaviour
     // タップされたら
     public void onClick()
     {
-        GameDirector.cursorPos--;
-        if(GameDirector.cursorPos < 0)
+        // タップ可能(in game)ならば処理
+        if (GameDirector.isTappable)
         {
-            GameDirector.cursorPos = 0;
+            GameDirector.cursorPos--;
+            if (GameDirector.cursorPos < 0)
+            {
+                GameDirector.cursorPos = 0;
+            }
         }
     }
 }
