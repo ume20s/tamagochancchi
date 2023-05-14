@@ -9,11 +9,18 @@ public class GameDirector : MonoBehaviour
     public static bool buttonA;                 // Aボタンフラグ
     public static bool buttonB;                 // Bボタンフラグ
     public static bool isTappable;              // タップ可能
-    bool gohanMode;                             // ごはんモード
+    int tamaMode;                               // たまごちゃん状態（0:通常 1:ごはん 2:リセット）
+    int resetCounter;                           // リセット画面カウンター
 
     // ゲームオブジェクト
     GameObject[] cursor = new GameObject[5];
     GameObject tama;
+    GameObject tama_reset;
+
+    // スプライト
+    public Sprite[] t_guage = new Sprite[7];    // 時間メーター
+    public Sprite[] s_guage = new Sprite[8];    // 満腹メーター
+    public Sprite[] tamaReset = new Sprite[4];  // リセット画面
 
     // アニメーター
     Animator animator;
@@ -28,6 +35,7 @@ public class GameDirector : MonoBehaviour
         cursor[3] = GameObject.Find("cursor3");
         cursor[4] = GameObject.Find("cursor4");
         tama = GameObject.Find("tama");
+        tama_reset = GameObject.Find("tama_reset");
 
         // アニメーターコンポーネントの取得
         animator = tama.GetComponent<Animator>();
@@ -38,10 +46,11 @@ public class GameDirector : MonoBehaviour
             cursor[i].SetActive(false);
         }
 
-        // ボタンフラグとごはんモードの初期化
+        // ボタンフラグと通常モードの準備
         buttonA = false;
         buttonB = false;
-        gohanMode = false;
+        tamaMode = 0;
+        tama_reset.SetActive(false);
 
         // タップ不可にして孵化
         isTappable = false;
@@ -51,8 +60,11 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // デバッグ用
+        // Debug.Log(tamaMode + "," + resetCounter + "," + cursorPos);
+
         // タップ可能(in game)ならば処理
-        if(isTappable)
+        if (isTappable)
         {
             for (int i = 0; i < 5; i++)
             {
@@ -66,90 +78,160 @@ public class GameDirector : MonoBehaviour
                 }
             }
 
-            // ごはんモードだったら
-            if (gohanMode)
+            switch (tamaMode)
             {
-                // Aボタンが押されていた
-                if (buttonA)
-                {
-                    switch (cursorPos)
+                // 通常モード
+                case 0:
+                    // Aボタンが押されていた
+                    if (buttonA)
                     {
-                        // 納豆
-                        case 0:
-                            StartCoroutine("tamaNatto");
-                            break;
+                        switch (cursorPos)
+                        {
+                            // ごはんモードへ遷移
+                            case 0:
+                                animator.SetTrigger("gohanTrigger");
+                                tamaMode = 1;
+                                break;
 
-                        // ラーメン
-                        case 1:
-                            StartCoroutine("tamaRamen");
-                            break;
+                            // お風呂
+                            case 1:
+                                StartCoroutine("tamaBath");
+                                break;
 
-                        // 寿司
-                        case 2:
-                            StartCoroutine("tamaSushi");
-                            break;
+                            // ギター
+                            case 2:
+                                StartCoroutine("tamaGuitar");
+                                break;
 
-                        // ウナギ弁当
-                        case 3:
-                            StartCoroutine("tamaUnagi");
-                            break;
+                            // 通報
+                            case 3:
+                                StartCoroutine("tamaTuho");
+                                break;
 
-                        // プラモデル
-                        case 4:
-                            StartCoroutine("tamaPramo");
-                            break;
+                            // リセットモードへ遷移
+                            case 4:
+                                tama_reset.SetActive(true);
+                                tama_reset.GetComponent<SpriteRenderer>().sprite = tamaReset[0];
+                                resetCounter = 1;
+                                tamaMode = 2;
+                                break;
 
-                        // NOT REACHED
-                        default:
-                            break;
+                            // NOT REACHED
+                            default:
+                                break;
+                        }
+                        buttonA = false;
                     }
-                    gohanMode = false;
-                    buttonA = false;
-                }
+                    break;
 
-                // Bボタンが押されていた
-                if (buttonB)
-                {
-                    animator.SetTrigger("waitingTrigger");
-                    gohanMode = false;
-                    buttonB = false;
-                }
-            }
-            // 通常モードだったら
-            else
-            {
-                // Aボタンが押されていた
-                if (buttonA)
-                {
-                    switch (cursorPos)
+                // ごはんモード
+                case 1:
+                    // Aボタンが押されていた
+                    if (buttonA)
                     {
-                        // ごはん
-                        case 0:
-                            animator.SetTrigger("gohanTrigger");
-                            gohanMode = true;
-                            break;
+                        switch (cursorPos)
+                        {
+                            // 納豆
+                            case 0:
+                                StartCoroutine("tamaNatto");
+                                break;
 
-                        // お風呂
-                        case 1:
-                            StartCoroutine("tamaBath");
-                            break;
+                            // ラーメン
+                            case 1:
+                                StartCoroutine("tamaRamen");
+                                break;
 
-                        // ギター
-                        case 2:
-                            StartCoroutine("tamaGuitar");
-                            break;
+                            // 寿司
+                            case 2:
+                                StartCoroutine("tamaSushi");
+                                break;
 
-                        // 通報
-                        case 3:
-                            StartCoroutine("tamaTuho");
-                            break;
+                            // ウナギ弁当
+                            case 3:
+                                StartCoroutine("tamaUnagi");
+                                break;
 
-                        // NOT REACHED
-                        default:
-                            break;
+                            // プラモデル
+                            case 4:
+                                StartCoroutine("tamaPramo");
+                                break;
+
+                            // NOT REACHED
+                            default:
+                                break;
+                        }
+                        tamaMode = 0;
+                        buttonA = false;
                     }
-                    buttonA = false;
-                }
+
+                    // Bボタンが押されていた
+                    if (buttonB)
+                    {
+                        animator.SetTrigger("waitingTrigger");
+                        tamaMode = 0;
+                        buttonB = false;
+                    }
+                    break;
+
+                // リセットモード
+                case 2:
+                    if (buttonA)
+                    {
+                        // リセット選択１回目
+                        if(resetCounter == 1)
+                        {
+                            // カーソル位置が一番上「はい」だったら
+                            if (cursorPos == 0)
+                            {
+                                // 次の画面にしてリセットカウンター加算
+                                tama_reset.GetComponent<SpriteRenderer>().sprite = tamaReset[1];
+                                resetCounter++;
+                            }
+                            // それ以外なら通常モードに戻る
+                            else
+                            {
+                                tama_reset.GetComponent<SpriteRenderer>().sprite = tamaReset[0];
+                                tama_reset.SetActive(false);
+                                resetCounter = 0;
+                                tamaMode = 0;
+                            }
+
+                        }
+                        // リセット選択２回目
+                        else
+                        {
+                            // カーソル位置が一番下「はい」だったら
+                            if (cursorPos == 4)
+                            {
+                                // リセット画面へ遷移
+                                StartCoroutine("tamaInitReset");
+                            }
+                            // それ以外なら通常モードに戻る
+                            else
+                            {
+                                tama_reset.GetComponent<SpriteRenderer>().sprite = tamaReset[0];
+                                tama_reset.SetActive(false);
+                                resetCounter = 0;
+                                tamaMode = 0;
+                            }
+                        }
+                        buttonA = false;
+                    }
+
+                    // Bボタンが押されていた
+                    if (buttonB)
+                    {
+                        tama_reset.GetComponent<SpriteRenderer>().sprite = tamaReset[0];
+                        tama_reset.SetActive(false);
+                        resetCounter = 0;
+                        tamaMode = 0;
+                        buttonB = false;
+                    }
+                    break;
+
+                // NOT REACHED
+                default:
+                    break;
             }
         }
     }
@@ -290,6 +372,33 @@ public class GameDirector : MonoBehaviour
         // アニメ遷移してウェイト
         animator.SetTrigger("tuhoTrigger");
         yield return new WaitForSeconds(5.0f);
+
+        // タップ可能(in Game)
+        isTappable = true;
+    }
+
+    // たまごちゃんリセット
+    IEnumerator tamaInitReset()
+    {
+        // タップ不可
+        isTappable = false;
+
+        // カーソル非表示
+        for(int i = 1; i<5; i++)
+        {
+            cursor[i].SetActive(false);
+        }
+
+        // アニメ遷移してウェイト
+        animator.SetTrigger("resetTrigger");
+        tama_reset.SetActive(false);
+        yield return new WaitForSeconds(12.0f);
+
+        // その他いろいろ初期化
+        tamaMode = 0;
+        resetCounter = 0;
+        cursorPos = 0;
+        cursor[cursorPos].SetActive(true);
 
         // タップ可能(in Game)
         isTappable = true;
