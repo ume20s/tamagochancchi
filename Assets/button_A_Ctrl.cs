@@ -11,6 +11,7 @@ public class button_A_Ctrl : MonoBehaviour
         if (GameDirector.isTappable)
         {
             GameDirector.buttonA = true;
+            GameDirector.buttonB = false;
         }
     }
 }

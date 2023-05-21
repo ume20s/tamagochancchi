@@ -11,15 +11,18 @@ public class GameDirector : MonoBehaviour
     public static bool isTappable;              // タップ可能
     int tamaMode;                               // たまごちゃん状態（0:通常 1:ごはん 2:リセット）
     int resetCounter;                           // リセット画面カウンター
+    int manpukuRate;                            // 満腹度
 
     // ゲームオブジェクト
     GameObject[] cursor = new GameObject[5];
     GameObject tama;
     GameObject tama_reset;
+    GameObject s_guage;
+    GameObject t_guage;
 
     // スプライト
-    public Sprite[] t_guage = new Sprite[7];    // 時間メーター
-    public Sprite[] s_guage = new Sprite[8];    // 満腹メーター
+    public Sprite[] t_disp = new Sprite[7];     // 時間メーター
+    public Sprite[] s_disp = new Sprite[7];     // 満腹メーター
     public Sprite[] tamaReset = new Sprite[4];  // リセット画面
 
     // アニメーター
@@ -36,6 +39,8 @@ public class GameDirector : MonoBehaviour
         cursor[4] = GameObject.Find("cursor4");
         tama = GameObject.Find("tama");
         tama_reset = GameObject.Find("tama_reset");
+        s_guage = GameObject.Find("s_guage");
+        t_guage = GameObject.Find("t_guage");
 
         // アニメーターコンポーネントの取得
         animator = tama.GetComponent<Animator>();
@@ -51,6 +56,10 @@ public class GameDirector : MonoBehaviour
         buttonB = false;
         tamaMode = 0;
         tama_reset.SetActive(false);
+
+        // 満腹ゲージの準備
+        manpukuRate = 0;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
 
         // タップ不可にして孵化
         isTappable = false;
@@ -87,10 +96,19 @@ public class GameDirector : MonoBehaviour
                     {
                         switch (cursorPos)
                         {
-                            // ごはんモードへ遷移
+                            // ごはん
                             case 0:
-                                animator.SetTrigger("gohanTrigger");
-                                tamaMode = 1;
+                                // 満腹だったらいやいや
+                                if(manpukuRate == 6)
+                                {
+                                    StartCoroutine("tamaIyaiya");
+                                }
+                                // じゃなかったらごはんモードへ遷移
+                                else
+                                {
+                                    animator.SetTrigger("gohanTrigger");
+                                    tamaMode = 1;
+                                }
                                 break;
 
                             // お風呂
@@ -263,6 +281,10 @@ public class GameDirector : MonoBehaviour
         animator.SetTrigger("nattoTrigger");
         yield return new WaitForSeconds(6.5f);
 
+        // 満腹度アップ
+        manpukuRate++;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
+
         // タップ可能(in Game)
         isTappable = true;
     }
@@ -276,6 +298,10 @@ public class GameDirector : MonoBehaviour
         // アニメ遷移してウェイト
         animator.SetTrigger("ramenTrigger");
         yield return new WaitForSeconds(4.0f);
+
+        // 満腹度アップ
+        manpukuRate++;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
 
         // カーソルをごはんにもどす
         cursorPos = 0;
@@ -294,6 +320,10 @@ public class GameDirector : MonoBehaviour
         animator.SetTrigger("sushiTrigger");
         yield return new WaitForSeconds(3.3f);
 
+        // 満腹度アップ
+        manpukuRate++;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
+
         // カーソルをごはんにもどす
         cursorPos = 0;
 
@@ -310,6 +340,10 @@ public class GameDirector : MonoBehaviour
         // アニメ遷移してウェイト
         animator.SetTrigger("unagiTrigger");
         yield return new WaitForSeconds(3.66f);
+
+        // 満腹度アップ
+        manpukuRate++;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
 
         // カーソルをごはんにもどす
         cursorPos = 0;
@@ -328,8 +362,26 @@ public class GameDirector : MonoBehaviour
         animator.SetTrigger("pramoTrigger");
         yield return new WaitForSeconds(4.0f);
 
+        // 満腹度アップ
+        manpukuRate++;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
+
         // カーソルをごはんにもどす
         cursorPos = 0;
+
+        // タップ可能(in Game)
+        isTappable = true;
+    }
+
+    // たまごちゃんいやいや
+    IEnumerator tamaIyaiya()
+    {
+        // タップ不可
+        isTappable = false;
+
+        // アニメ遷移してウェイト
+        animator.SetTrigger("iyaiyaTrigger");
+        yield return new WaitForSeconds(3.0f);
 
         // タップ可能(in Game)
         isTappable = true;
@@ -389,6 +441,14 @@ public class GameDirector : MonoBehaviour
             cursor[i].SetActive(false);
         }
 
+        // ゲージ非表示
+        s_guage.SetActive(false);
+        t_guage.SetActive(false);
+
+        // 満腹度リセット
+        manpukuRate = 0;
+        s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
+
         // アニメ遷移してウェイト
         animator.SetTrigger("resetTrigger");
         tama_reset.SetActive(false);
@@ -399,6 +459,8 @@ public class GameDirector : MonoBehaviour
         resetCounter = 0;
         cursorPos = 0;
         cursor[cursorPos].SetActive(true);
+        s_guage.SetActive(true);
+        t_guage.SetActive(true);
 
         // タップ可能(in Game)
         isTappable = true;

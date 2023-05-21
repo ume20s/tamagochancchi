@@ -10,6 +10,7 @@ public class button_B_Ctrl : MonoBehaviour
         // タップ可能(in game)ならば処理
         if (GameDirector.isTappable)
         {
+            GameDirector.buttonA = false;
             GameDirector.buttonB = true;
         }
     }
