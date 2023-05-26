@@ -9,9 +9,10 @@ public class GameDirector : MonoBehaviour
     public static bool buttonA;                 // Aボタンフラグ
     public static bool buttonB;                 // Bボタンフラグ
     public static bool isTappable;              // タップ可能
-    int tamaMode;                               // たまごちゃん状態（0:通常 1:ごはん 2:リセット）
-    int resetCounter;                           // リセット画面カウンター
-    int manpukuRate;                            // 満腹度
+    private int tamaMode;                       // たまごちゃん状態（0:通常 1:ごはん 2:リセット 3:最終形態）
+    private int resetCounter;                   // リセット画面カウンター
+    private float remainTime = 72.999f;         // 残り時間
+    private int manpukuRate;                    // 満腹度
 
     // ゲームオブジェクト
     GameObject[] cursor = new GameObject[5];
@@ -19,6 +20,10 @@ public class GameDirector : MonoBehaviour
     GameObject tama_reset;
     GameObject s_guage;
     GameObject t_guage;
+    GameObject henshin;
+    GameObject last;
+    GameObject button_R;
+    GameObject button_Z;
 
     // スプライト
     public Sprite[] t_disp = new Sprite[7];     // 時間メーター
@@ -26,7 +31,8 @@ public class GameDirector : MonoBehaviour
     public Sprite[] tamaReset = new Sprite[4];  // リセット画面
 
     // アニメーター
-    Animator animator;
+    Animator animatorTama;
+    Animator animatorHenshin;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +47,17 @@ public class GameDirector : MonoBehaviour
         tama_reset = GameObject.Find("tama_reset");
         s_guage = GameObject.Find("s_guage");
         t_guage = GameObject.Find("t_guage");
+        henshin = GameObject.Find("henshin");
+        last = GameObject.Find("last");
+        button_R = GameObject.Find("button_R");
+        button_Z = GameObject.Find("button_Z");
 
         // アニメーターコンポーネントの取得
-        animator = tama.GetComponent<Animator>();
+        animatorTama = tama.GetComponent<Animator>();
+        animatorHenshin = henshin.GetComponent<Animator>();
 
         // カーソル表示の初期化
-        for(int i=0; i<5; i++)
+        for (int i=0; i<5; i++)
         {
             cursor[i].SetActive(false);
         }
@@ -71,6 +82,44 @@ public class GameDirector : MonoBehaviour
     {
         // デバッグ用
         // Debug.Log(tamaMode + "," + resetCounter + "," + cursorPos);
+
+        // 時間経過
+        remainTime -= Time.deltaTime;
+        if(remainTime > 60.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[6];
+        }
+        else if (remainTime > 50.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[5];
+        }
+        else if (remainTime > 40.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[4];
+        }
+        else if (remainTime > 30.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[3];
+        }
+        else if (remainTime > 20.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[2];
+        }
+        else if (remainTime > 10.0f)
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[1];
+        }
+        else
+        {
+            t_guage.GetComponent<SpriteRenderer>().sprite = t_disp[0];
+        }
+
+        // 残り時間がなくなったら最終形態
+        if ((int)remainTime <= 0)
+        {
+            tamaMode = 4;
+        }
+
 
         // タップ可能(in game)ならば処理
         if (isTappable)
@@ -106,7 +155,7 @@ public class GameDirector : MonoBehaviour
                                 // じゃなかったらごはんモードへ遷移
                                 else
                                 {
-                                    animator.SetTrigger("gohanTrigger");
+                                    animatorTama.SetTrigger("gohanTrigger");
                                     tamaMode = 1;
                                 }
                                 break;
@@ -185,7 +234,7 @@ public class GameDirector : MonoBehaviour
                     // Bボタンが押されていた
                     if (buttonB)
                     {
-                        animator.SetTrigger("waitingTrigger");
+                        animatorTama.SetTrigger("waitingTrigger");
                         tamaMode = 0;
                         buttonB = false;
                     }
@@ -247,6 +296,11 @@ public class GameDirector : MonoBehaviour
                     }
                     break;
 
+                // 最終形態モード
+                case 4:
+                    StartCoroutine("tamaLast");
+                    break;
+
                 // NOT REACHED
                 default:
                     break;
@@ -278,7 +332,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("nattoTrigger");
+        animatorTama.SetTrigger("nattoTrigger");
         yield return new WaitForSeconds(6.5f);
 
         // 満腹度アップ
@@ -296,7 +350,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("ramenTrigger");
+        animatorTama.SetTrigger("ramenTrigger");
         yield return new WaitForSeconds(4.0f);
 
         // 満腹度アップ
@@ -317,7 +371,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("sushiTrigger");
+        animatorTama.SetTrigger("sushiTrigger");
         yield return new WaitForSeconds(3.3f);
 
         // 満腹度アップ
@@ -338,7 +392,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("unagiTrigger");
+        animatorTama.SetTrigger("unagiTrigger");
         yield return new WaitForSeconds(3.66f);
 
         // 満腹度アップ
@@ -359,7 +413,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("pramoTrigger");
+        animatorTama.SetTrigger("pramoTrigger");
         yield return new WaitForSeconds(4.0f);
 
         // 満腹度アップ
@@ -380,7 +434,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("iyaiyaTrigger");
+        animatorTama.SetTrigger("iyaiyaTrigger");
         yield return new WaitForSeconds(3.0f);
 
         // タップ可能(in Game)
@@ -394,7 +448,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("bathTrigger");
+        animatorTama.SetTrigger("bathTrigger");
         yield return new WaitForSeconds(3.0f);
 
         // タップ可能(in Game)
@@ -408,7 +462,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("guitarTrigger");
+        animatorTama.SetTrigger("guitarTrigger");
         yield return new WaitForSeconds(3.0f);
 
         // タップ可能(in Game)
@@ -422,7 +476,7 @@ public class GameDirector : MonoBehaviour
         isTappable = false;
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("tuhoTrigger");
+        animatorTama.SetTrigger("tuhoTrigger");
         yield return new WaitForSeconds(5.0f);
 
         // タップ可能(in Game)
@@ -450,7 +504,7 @@ public class GameDirector : MonoBehaviour
         s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
 
         // アニメ遷移してウェイト
-        animator.SetTrigger("resetTrigger");
+        animatorTama.SetTrigger("resetTrigger");
         tama_reset.SetActive(false);
         yield return new WaitForSeconds(12.0f);
 
@@ -464,5 +518,31 @@ public class GameDirector : MonoBehaviour
 
         // タップ可能(in Game)
         isTappable = true;
+    }
+
+    // たまごちゃん最終形態
+    IEnumerator tamaLast()
+    {
+        // タップ不可
+        isTappable = false;
+
+        // 変身モーション
+        henshin.GetComponent<Renderer>().sortingOrder = 5;
+        animatorHenshin.SetTrigger("start");
+        yield return new WaitForSeconds(7.0f);
+
+        // 最終形態の表示
+        last.transform.localScale = new Vector2(0.0f, 0.0f);
+        last.GetComponent<Renderer>().sortingOrder = 6;
+        for(float scale=0.0f; scale <= 1.1f; scale += 0.1f)
+        {
+            last.transform.localScale = new Vector2(scale, scale);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        // ボタンの表示
+        button_R.GetComponent<Renderer>().sortingOrder = 7;
+        button_Z.GetComponent<Renderer>().sortingOrder = 7;
+
     }
 }
