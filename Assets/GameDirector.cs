@@ -68,6 +68,10 @@ public class GameDirector : MonoBehaviour
         tamaMode = 0;
         tama_reset.SetActive(false);
 
+        // 図鑑ともう一回ボタンを非表示に
+        button_Z.SetActive(false);
+        button_R.SetActive(false);
+
         // 満腹ゲージの準備
         manpukuRate = 0;
         s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
@@ -540,9 +544,8 @@ public class GameDirector : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        // ボタンの表示
-        button_R.GetComponent<Renderer>().sortingOrder = 7;
-        button_Z.GetComponent<Renderer>().sortingOrder = 7;
-
+        // 図鑑ともう一回ボタンの表示
+        button_Z.SetActive(true);
+        button_R.SetActive(true);
     }
 }
