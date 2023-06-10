@@ -20,194 +20,206 @@ extern void button_A_Ctrl__ctor_mC1AC1153812920120001EC5EA7389F20E0C0ADDE (void)
 extern void button_B_Ctrl_onClick_m9437082C772313A8CA65D559C992FE47C2EC2411 (void);
 // 0x00000004 System.Void button_B_Ctrl::.ctor()
 extern void button_B_Ctrl__ctor_m86938A57FF61A61228BE792BB5D99A16BB54A149 (void);
-// 0x00000005 System.Void cross_Down_Ctrl::onClick()
+// 0x00000005 System.Void button_R_Ctrl::onClick()
+extern void button_R_Ctrl_onClick_m66AD0673E62D61F6311ED70F2E23804FD7A4B656 (void);
+// 0x00000006 System.Void button_R_Ctrl::.ctor()
+extern void button_R_Ctrl__ctor_m1969F592D81814EE35E0973BAD283C879A480F1A (void);
+// 0x00000007 System.Void button_Z_Ctrl::onClick()
+extern void button_Z_Ctrl_onClick_mE1287010F019CDF31E7DFAD305CB1AC0AF5D84EE (void);
+// 0x00000008 System.Void button_Z_Ctrl::.ctor()
+extern void button_Z_Ctrl__ctor_mFDB48FC2A0C2B5D4D6673A4E9055B64C16B468A4 (void);
+// 0x00000009 System.Void cross_Down_Ctrl::onClick()
 extern void cross_Down_Ctrl_onClick_mFF4C239EED8454C214A64026D11C172B1D46BE2B (void);
-// 0x00000006 System.Void cross_Down_Ctrl::.ctor()
+// 0x0000000A System.Void cross_Down_Ctrl::.ctor()
 extern void cross_Down_Ctrl__ctor_m72E6A73335FD7A415FCB8C5B8155E6F179ABA84A (void);
-// 0x00000007 System.Void cross_up_Ctrl::onClick()
+// 0x0000000B System.Void cross_up_Ctrl::onClick()
 extern void cross_up_Ctrl_onClick_mB75503EB4BAE8CC1AC0017C61003C28034F715B1 (void);
-// 0x00000008 System.Void cross_up_Ctrl::.ctor()
+// 0x0000000C System.Void cross_up_Ctrl::.ctor()
 extern void cross_up_Ctrl__ctor_m264B202D114430091ED2436F5DFEA56FE4688A79 (void);
-// 0x00000009 System.Void GameDirector::Start()
+// 0x0000000D System.Void GameDirector::Start()
 extern void GameDirector_Start_m02BE40249C44E2ECC4035D59D4A70F6678A41E9C (void);
-// 0x0000000A System.Void GameDirector::Update()
+// 0x0000000E System.Void GameDirector::Update()
 extern void GameDirector_Update_m3D758017B69C5F1B1E381BDED2E19E77A17298A5 (void);
-// 0x0000000B System.Collections.IEnumerator GameDirector::tamaFuka()
+// 0x0000000F System.Collections.IEnumerator GameDirector::tamaFuka()
 extern void GameDirector_tamaFuka_m53D3097032D89B414A399B4AB4CD7EE0AB42808B (void);
-// 0x0000000C System.Collections.IEnumerator GameDirector::tamaNatto()
+// 0x00000010 System.Collections.IEnumerator GameDirector::tamaNatto()
 extern void GameDirector_tamaNatto_mE22277900E7B98318955D88F70DB5AF16B5A978D (void);
-// 0x0000000D System.Collections.IEnumerator GameDirector::tamaRamen()
+// 0x00000011 System.Collections.IEnumerator GameDirector::tamaRamen()
 extern void GameDirector_tamaRamen_m156B467F2723B80E66E95CC49A356C6737BCBEB5 (void);
-// 0x0000000E System.Collections.IEnumerator GameDirector::tamaSushi()
+// 0x00000012 System.Collections.IEnumerator GameDirector::tamaSushi()
 extern void GameDirector_tamaSushi_mBBC40AB0AD4C29158CCB0A1CF2D9622BDE4A0DA0 (void);
-// 0x0000000F System.Collections.IEnumerator GameDirector::tamaUnagi()
+// 0x00000013 System.Collections.IEnumerator GameDirector::tamaUnagi()
 extern void GameDirector_tamaUnagi_mBE344C14F5FFE161EE0B2C354B7716271E186E2D (void);
-// 0x00000010 System.Collections.IEnumerator GameDirector::tamaPramo()
+// 0x00000014 System.Collections.IEnumerator GameDirector::tamaPramo()
 extern void GameDirector_tamaPramo_mEA0F83B8DBBC54E2B3F9CA58096B3313CB93F1FB (void);
-// 0x00000011 System.Collections.IEnumerator GameDirector::tamaIyaiya()
+// 0x00000015 System.Collections.IEnumerator GameDirector::tamaIyaiya()
 extern void GameDirector_tamaIyaiya_m2BD5775B66F16E6D40EDCBE30634680DB2182106 (void);
-// 0x00000012 System.Collections.IEnumerator GameDirector::tamaBath()
+// 0x00000016 System.Collections.IEnumerator GameDirector::tamaBath()
 extern void GameDirector_tamaBath_m9E6DC6CFBDEB1E82850E808E61B6DD3DBBC28B78 (void);
-// 0x00000013 System.Collections.IEnumerator GameDirector::tamaGuitar()
+// 0x00000017 System.Collections.IEnumerator GameDirector::tamaGuitar()
 extern void GameDirector_tamaGuitar_mC778F924E2E8926FEAFFFFE96A5443548DD7233C (void);
-// 0x00000014 System.Collections.IEnumerator GameDirector::tamaTuho()
+// 0x00000018 System.Collections.IEnumerator GameDirector::tamaTuho()
 extern void GameDirector_tamaTuho_m27FC5A9E05901D342CC3CC16D24FC9CE24258270 (void);
-// 0x00000015 System.Collections.IEnumerator GameDirector::tamaInitReset()
+// 0x00000019 System.Collections.IEnumerator GameDirector::tamaInitReset()
 extern void GameDirector_tamaInitReset_m7035B094D3F964A766AE5886CDA46D7A610AE0C9 (void);
-// 0x00000016 System.Collections.IEnumerator GameDirector::tamaLast()
+// 0x0000001A System.Collections.IEnumerator GameDirector::tamaLast()
 extern void GameDirector_tamaLast_mEB5C984DA7F213830E4058FA0043BF4A360BF8E3 (void);
-// 0x00000017 System.Void GameDirector::.ctor()
+// 0x0000001B System.Void GameDirector::.ctor()
 extern void GameDirector__ctor_m11BFC3A4A757A802BDD31DFC5E5F1D19E54DF1DD (void);
-// 0x00000018 System.Void GameDirector/<tamaFuka>d__22::.ctor(System.Int32)
-extern void U3CtamaFukaU3Ed__22__ctor_m7DB86B33354D8848652F616518682169FF27B6CA (void);
-// 0x00000019 System.Void GameDirector/<tamaFuka>d__22::System.IDisposable.Dispose()
-extern void U3CtamaFukaU3Ed__22_System_IDisposable_Dispose_mF8D17157E9F55DFD4D1E3CB547416287CA1CA175 (void);
-// 0x0000001A System.Boolean GameDirector/<tamaFuka>d__22::MoveNext()
-extern void U3CtamaFukaU3Ed__22_MoveNext_m4C4F54E214375798637FAC8ABDDF8E5852ED3049 (void);
-// 0x0000001B System.Object GameDirector/<tamaFuka>d__22::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaFukaU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m56E198851852CB4BD891578D9AB1C73F5B001B71 (void);
-// 0x0000001C System.Void GameDirector/<tamaFuka>d__22::System.Collections.IEnumerator.Reset()
-extern void U3CtamaFukaU3Ed__22_System_Collections_IEnumerator_Reset_mC408F59A8A34088A6064072C968869096FB69AF5 (void);
-// 0x0000001D System.Object GameDirector/<tamaFuka>d__22::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaFukaU3Ed__22_System_Collections_IEnumerator_get_Current_mEA71E08C4561EB1CD4C0471FF81C2D1BC9156AEC (void);
-// 0x0000001E System.Void GameDirector/<tamaNatto>d__23::.ctor(System.Int32)
-extern void U3CtamaNattoU3Ed__23__ctor_m839130985443F141508B9AC64E099B83519F21A3 (void);
-// 0x0000001F System.Void GameDirector/<tamaNatto>d__23::System.IDisposable.Dispose()
-extern void U3CtamaNattoU3Ed__23_System_IDisposable_Dispose_m1D0CB1731B12BCC98F34EF6916D722AC1C62C1C5 (void);
-// 0x00000020 System.Boolean GameDirector/<tamaNatto>d__23::MoveNext()
-extern void U3CtamaNattoU3Ed__23_MoveNext_m1D20C0D7B7BBE2E39CEC668208A0450C98734018 (void);
-// 0x00000021 System.Object GameDirector/<tamaNatto>d__23::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaNattoU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6E329B8BD17789849CB12236C75D3A8010FE632E (void);
-// 0x00000022 System.Void GameDirector/<tamaNatto>d__23::System.Collections.IEnumerator.Reset()
-extern void U3CtamaNattoU3Ed__23_System_Collections_IEnumerator_Reset_m05AF8E2B17B398354F721E66854852CC3FEB9398 (void);
-// 0x00000023 System.Object GameDirector/<tamaNatto>d__23::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaNattoU3Ed__23_System_Collections_IEnumerator_get_Current_m15413C2576F528534EAB1E86F6C499D8E987E385 (void);
-// 0x00000024 System.Void GameDirector/<tamaRamen>d__24::.ctor(System.Int32)
-extern void U3CtamaRamenU3Ed__24__ctor_m6D86029DA59FC12086BC1AEE8FFCB3AD4C933D0D (void);
-// 0x00000025 System.Void GameDirector/<tamaRamen>d__24::System.IDisposable.Dispose()
-extern void U3CtamaRamenU3Ed__24_System_IDisposable_Dispose_m4FDA34CD99E9CECD31AAF1A88D3170FC5045494B (void);
-// 0x00000026 System.Boolean GameDirector/<tamaRamen>d__24::MoveNext()
-extern void U3CtamaRamenU3Ed__24_MoveNext_mDCA61F3D74A3F4E1B24954C93AF5D17DB6796CCA (void);
-// 0x00000027 System.Object GameDirector/<tamaRamen>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaRamenU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC08EA4FB7CB57B0256123C61D099CCBFE50D71C4 (void);
-// 0x00000028 System.Void GameDirector/<tamaRamen>d__24::System.Collections.IEnumerator.Reset()
-extern void U3CtamaRamenU3Ed__24_System_Collections_IEnumerator_Reset_mBABD0C08477EE5BF191BDA9E56CEACAC91D1B0D5 (void);
-// 0x00000029 System.Object GameDirector/<tamaRamen>d__24::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaRamenU3Ed__24_System_Collections_IEnumerator_get_Current_mE15582B0EB8DC2EE64ABF1559EA055FA65E519A1 (void);
-// 0x0000002A System.Void GameDirector/<tamaSushi>d__25::.ctor(System.Int32)
-extern void U3CtamaSushiU3Ed__25__ctor_m41CECF393DDB9F99EAA6C29FB19EDE4B8EB89EF7 (void);
-// 0x0000002B System.Void GameDirector/<tamaSushi>d__25::System.IDisposable.Dispose()
-extern void U3CtamaSushiU3Ed__25_System_IDisposable_Dispose_mD0F49FF8A8DAF509AFF57E5FF75C6DE60C98D324 (void);
-// 0x0000002C System.Boolean GameDirector/<tamaSushi>d__25::MoveNext()
-extern void U3CtamaSushiU3Ed__25_MoveNext_m6B6C8B4EFD05F18B50461C250C2081E15CF49346 (void);
-// 0x0000002D System.Object GameDirector/<tamaSushi>d__25::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaSushiU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAA7F9AFB2501E6BFA684B101EBE4FDF9E059A577 (void);
-// 0x0000002E System.Void GameDirector/<tamaSushi>d__25::System.Collections.IEnumerator.Reset()
-extern void U3CtamaSushiU3Ed__25_System_Collections_IEnumerator_Reset_m6C3F1B3FFD25ED602C00592030E333A49CD963BB (void);
-// 0x0000002F System.Object GameDirector/<tamaSushi>d__25::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaSushiU3Ed__25_System_Collections_IEnumerator_get_Current_m3C4600A0AB44DA3D931312C5CF087FD55FEE4C29 (void);
-// 0x00000030 System.Void GameDirector/<tamaUnagi>d__26::.ctor(System.Int32)
-extern void U3CtamaUnagiU3Ed__26__ctor_mECDCD72D26B3B83D4D4C80708797EBF591C017FE (void);
-// 0x00000031 System.Void GameDirector/<tamaUnagi>d__26::System.IDisposable.Dispose()
-extern void U3CtamaUnagiU3Ed__26_System_IDisposable_Dispose_mD4A259A51342C471E7DFCF0804A3DB6D5EBD7C3F (void);
-// 0x00000032 System.Boolean GameDirector/<tamaUnagi>d__26::MoveNext()
-extern void U3CtamaUnagiU3Ed__26_MoveNext_m500597E1E0F22B068E5DCF0E83626DC41021612D (void);
-// 0x00000033 System.Object GameDirector/<tamaUnagi>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaUnagiU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFF8914EA626B5F6EFC337CC0FB658098F6E6BEAE (void);
-// 0x00000034 System.Void GameDirector/<tamaUnagi>d__26::System.Collections.IEnumerator.Reset()
-extern void U3CtamaUnagiU3Ed__26_System_Collections_IEnumerator_Reset_mF42FB215F340BC4E891E233F6483E9F1B8F3974F (void);
-// 0x00000035 System.Object GameDirector/<tamaUnagi>d__26::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaUnagiU3Ed__26_System_Collections_IEnumerator_get_Current_mDDB149CE801327554FA200DDD7F18D448503AAB3 (void);
-// 0x00000036 System.Void GameDirector/<tamaPramo>d__27::.ctor(System.Int32)
-extern void U3CtamaPramoU3Ed__27__ctor_mBE12D9AF3A1FA29FC58D98087739C6719D38F40D (void);
-// 0x00000037 System.Void GameDirector/<tamaPramo>d__27::System.IDisposable.Dispose()
-extern void U3CtamaPramoU3Ed__27_System_IDisposable_Dispose_m896F4F47AD6858CF71C47B16D5BF9295D68EA334 (void);
-// 0x00000038 System.Boolean GameDirector/<tamaPramo>d__27::MoveNext()
-extern void U3CtamaPramoU3Ed__27_MoveNext_mD452DFD220E236C398BCB68FD5DA15061F37E723 (void);
-// 0x00000039 System.Object GameDirector/<tamaPramo>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaPramoU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9D961B0DD4529B4BEDF2FBCE4014C0486554E623 (void);
-// 0x0000003A System.Void GameDirector/<tamaPramo>d__27::System.Collections.IEnumerator.Reset()
-extern void U3CtamaPramoU3Ed__27_System_Collections_IEnumerator_Reset_mFCE6993D46B16EFAEE584D1242998A0F38EE6186 (void);
-// 0x0000003B System.Object GameDirector/<tamaPramo>d__27::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaPramoU3Ed__27_System_Collections_IEnumerator_get_Current_m5476C0BDFE27B748388DC7A92382E6541E87046D (void);
-// 0x0000003C System.Void GameDirector/<tamaIyaiya>d__28::.ctor(System.Int32)
-extern void U3CtamaIyaiyaU3Ed__28__ctor_m3D90971146A5343504928E156337C5744BEA3C00 (void);
-// 0x0000003D System.Void GameDirector/<tamaIyaiya>d__28::System.IDisposable.Dispose()
-extern void U3CtamaIyaiyaU3Ed__28_System_IDisposable_Dispose_mFA506E3CAF3554697827F2B0DBB04CC3F23FF735 (void);
-// 0x0000003E System.Boolean GameDirector/<tamaIyaiya>d__28::MoveNext()
-extern void U3CtamaIyaiyaU3Ed__28_MoveNext_mE5305E01ED0F7C0A52180B8FDBC7057CBD1AE731 (void);
-// 0x0000003F System.Object GameDirector/<tamaIyaiya>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaIyaiyaU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46CEFD517C56A5A3ADE6B52CED78DD633424340C (void);
-// 0x00000040 System.Void GameDirector/<tamaIyaiya>d__28::System.Collections.IEnumerator.Reset()
-extern void U3CtamaIyaiyaU3Ed__28_System_Collections_IEnumerator_Reset_m67A3B10726BA1DEFA4CD72B0258699FA2FE1616E (void);
-// 0x00000041 System.Object GameDirector/<tamaIyaiya>d__28::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaIyaiyaU3Ed__28_System_Collections_IEnumerator_get_Current_mD373D84ED58CA488EAB8EBCC5E4E91E56A6905DF (void);
-// 0x00000042 System.Void GameDirector/<tamaBath>d__29::.ctor(System.Int32)
-extern void U3CtamaBathU3Ed__29__ctor_m868FFC744FF727600D6DC235D5094FF2AD88F17D (void);
-// 0x00000043 System.Void GameDirector/<tamaBath>d__29::System.IDisposable.Dispose()
-extern void U3CtamaBathU3Ed__29_System_IDisposable_Dispose_mE36ADFBB8950C25AAC13BEC7AB3A0D5D21D32D49 (void);
-// 0x00000044 System.Boolean GameDirector/<tamaBath>d__29::MoveNext()
-extern void U3CtamaBathU3Ed__29_MoveNext_m07C7ADD8E18457DE1B9D72BD4A41D6149F35C4E8 (void);
-// 0x00000045 System.Object GameDirector/<tamaBath>d__29::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaBathU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8DDFA01C0B880398731D244035770E8D7D2ABA52 (void);
-// 0x00000046 System.Void GameDirector/<tamaBath>d__29::System.Collections.IEnumerator.Reset()
-extern void U3CtamaBathU3Ed__29_System_Collections_IEnumerator_Reset_m66D829F512E0740672966E4B6DF46CA88210F5D2 (void);
-// 0x00000047 System.Object GameDirector/<tamaBath>d__29::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaBathU3Ed__29_System_Collections_IEnumerator_get_Current_mA1BC6A46B389C341C34D7B0CB4C24EEE15650340 (void);
-// 0x00000048 System.Void GameDirector/<tamaGuitar>d__30::.ctor(System.Int32)
-extern void U3CtamaGuitarU3Ed__30__ctor_mF7B870CF11B8244520516715D0A02BBB2EC04C98 (void);
-// 0x00000049 System.Void GameDirector/<tamaGuitar>d__30::System.IDisposable.Dispose()
-extern void U3CtamaGuitarU3Ed__30_System_IDisposable_Dispose_m0F3857D53705D55413144ACED0FCDCB77DDF01B2 (void);
-// 0x0000004A System.Boolean GameDirector/<tamaGuitar>d__30::MoveNext()
-extern void U3CtamaGuitarU3Ed__30_MoveNext_m387EC85F707DA89743A7740F621A9779D98E3410 (void);
-// 0x0000004B System.Object GameDirector/<tamaGuitar>d__30::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaGuitarU3Ed__30_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD654251C1AF24ABC80CB353A3186F5A90E95E033 (void);
-// 0x0000004C System.Void GameDirector/<tamaGuitar>d__30::System.Collections.IEnumerator.Reset()
-extern void U3CtamaGuitarU3Ed__30_System_Collections_IEnumerator_Reset_m41CB01305CF7FEC8937E43433B8A69237A61D2E6 (void);
-// 0x0000004D System.Object GameDirector/<tamaGuitar>d__30::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaGuitarU3Ed__30_System_Collections_IEnumerator_get_Current_mDA3A26E1CC2262050FE89C580F4C09551932BE6C (void);
-// 0x0000004E System.Void GameDirector/<tamaTuho>d__31::.ctor(System.Int32)
-extern void U3CtamaTuhoU3Ed__31__ctor_mCCF81D72ABC8E1950571C4A3FF60A77BAD9FDEFC (void);
-// 0x0000004F System.Void GameDirector/<tamaTuho>d__31::System.IDisposable.Dispose()
-extern void U3CtamaTuhoU3Ed__31_System_IDisposable_Dispose_m34DBCC33B71A851DC87536A812E2D1E35A3140C3 (void);
-// 0x00000050 System.Boolean GameDirector/<tamaTuho>d__31::MoveNext()
-extern void U3CtamaTuhoU3Ed__31_MoveNext_mC0524B4EA0CB27FC6AC8168AF148510AD21DC2D0 (void);
-// 0x00000051 System.Object GameDirector/<tamaTuho>d__31::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaTuhoU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6BCA72BCC5F57A7BB9D93DB43529CC72CA3283E9 (void);
-// 0x00000052 System.Void GameDirector/<tamaTuho>d__31::System.Collections.IEnumerator.Reset()
-extern void U3CtamaTuhoU3Ed__31_System_Collections_IEnumerator_Reset_m9FA8CC0E0F3567C034CC556FAA7665CC1D79A99C (void);
-// 0x00000053 System.Object GameDirector/<tamaTuho>d__31::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaTuhoU3Ed__31_System_Collections_IEnumerator_get_Current_m0CDB81630C36D347E0B198744AE9D2D9A6657EC9 (void);
-// 0x00000054 System.Void GameDirector/<tamaInitReset>d__32::.ctor(System.Int32)
-extern void U3CtamaInitResetU3Ed__32__ctor_m825EF7005155B5D2761A40FCFCD03B196E52711D (void);
-// 0x00000055 System.Void GameDirector/<tamaInitReset>d__32::System.IDisposable.Dispose()
-extern void U3CtamaInitResetU3Ed__32_System_IDisposable_Dispose_m8D3F911E5284E3B66A2C1C6FC7E9008F77259FA6 (void);
-// 0x00000056 System.Boolean GameDirector/<tamaInitReset>d__32::MoveNext()
-extern void U3CtamaInitResetU3Ed__32_MoveNext_mA4026C448D10E30C06AE2A511E43CB19BC78DC1E (void);
-// 0x00000057 System.Object GameDirector/<tamaInitReset>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaInitResetU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m48A534E5FEDE478EC94BD171C9BF70DE23B348B0 (void);
-// 0x00000058 System.Void GameDirector/<tamaInitReset>d__32::System.Collections.IEnumerator.Reset()
-extern void U3CtamaInitResetU3Ed__32_System_Collections_IEnumerator_Reset_m85D23D4B982611030D877F5AE1A1A6A88AF7A086 (void);
-// 0x00000059 System.Object GameDirector/<tamaInitReset>d__32::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaInitResetU3Ed__32_System_Collections_IEnumerator_get_Current_m34A29CD80678B2FB2D5381AF874F3A9C70BCDB2B (void);
-// 0x0000005A System.Void GameDirector/<tamaLast>d__33::.ctor(System.Int32)
-extern void U3CtamaLastU3Ed__33__ctor_mCD7FCCB406D7D4B9C319EA73AF7D6F0C14F2168C (void);
-// 0x0000005B System.Void GameDirector/<tamaLast>d__33::System.IDisposable.Dispose()
-extern void U3CtamaLastU3Ed__33_System_IDisposable_Dispose_m36C9578A5F3A10ECE508D76C91C8514117559F9F (void);
-// 0x0000005C System.Boolean GameDirector/<tamaLast>d__33::MoveNext()
-extern void U3CtamaLastU3Ed__33_MoveNext_m0B3BAC8EA915C882E6182ACE3036E0778E51F6C3 (void);
-// 0x0000005D System.Object GameDirector/<tamaLast>d__33::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CtamaLastU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5C6FF65710F4CA8ED15F3173CDA9D1398B816D51 (void);
-// 0x0000005E System.Void GameDirector/<tamaLast>d__33::System.Collections.IEnumerator.Reset()
-extern void U3CtamaLastU3Ed__33_System_Collections_IEnumerator_Reset_m00D9CC20ABD3A91FBEA1F68DD4D3EEF154047FF7 (void);
-// 0x0000005F System.Object GameDirector/<tamaLast>d__33::System.Collections.IEnumerator.get_Current()
-extern void U3CtamaLastU3Ed__33_System_Collections_IEnumerator_get_Current_m496E59351901AB9F318702630BB6CCAE5AC5165F (void);
-static Il2CppMethodPointer s_methodPointers[95] = 
+// 0x0000001C System.Void GameDirector/<tamaFuka>d__27::.ctor(System.Int32)
+extern void U3CtamaFukaU3Ed__27__ctor_mAA940143BFBF5CA6BF00EF81980E6C16586FB456 (void);
+// 0x0000001D System.Void GameDirector/<tamaFuka>d__27::System.IDisposable.Dispose()
+extern void U3CtamaFukaU3Ed__27_System_IDisposable_Dispose_m55FA13F3EC5D8C92CBE32433C0F654B4BA75764A (void);
+// 0x0000001E System.Boolean GameDirector/<tamaFuka>d__27::MoveNext()
+extern void U3CtamaFukaU3Ed__27_MoveNext_mDDAF47ECC0CF4A220A12314BF451145B07170E29 (void);
+// 0x0000001F System.Object GameDirector/<tamaFuka>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaFukaU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46C33A5D45D6EA513E84F76BF3F8ED52D4DE995F (void);
+// 0x00000020 System.Void GameDirector/<tamaFuka>d__27::System.Collections.IEnumerator.Reset()
+extern void U3CtamaFukaU3Ed__27_System_Collections_IEnumerator_Reset_mF1CB9D97A2D46DAF425439C5DCD40C8F12DCD882 (void);
+// 0x00000021 System.Object GameDirector/<tamaFuka>d__27::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaFukaU3Ed__27_System_Collections_IEnumerator_get_Current_mE657F4FF880BBB4F750013358B37E050BE579525 (void);
+// 0x00000022 System.Void GameDirector/<tamaNatto>d__28::.ctor(System.Int32)
+extern void U3CtamaNattoU3Ed__28__ctor_m87D97B0294F4826247DE4C3324B3E50B33B70241 (void);
+// 0x00000023 System.Void GameDirector/<tamaNatto>d__28::System.IDisposable.Dispose()
+extern void U3CtamaNattoU3Ed__28_System_IDisposable_Dispose_mB2D4CB4791530298DAA34DE6F417E338F7D9A1CD (void);
+// 0x00000024 System.Boolean GameDirector/<tamaNatto>d__28::MoveNext()
+extern void U3CtamaNattoU3Ed__28_MoveNext_m07FB7943B97460F72DEC7F04E3A4C998C7E62470 (void);
+// 0x00000025 System.Object GameDirector/<tamaNatto>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaNattoU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2732543642755530CD3720A08C03535F270AC095 (void);
+// 0x00000026 System.Void GameDirector/<tamaNatto>d__28::System.Collections.IEnumerator.Reset()
+extern void U3CtamaNattoU3Ed__28_System_Collections_IEnumerator_Reset_mB932FCA8C9C6E3AE34F0F081CD52747181F17142 (void);
+// 0x00000027 System.Object GameDirector/<tamaNatto>d__28::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaNattoU3Ed__28_System_Collections_IEnumerator_get_Current_m68D97557CB40AA11F17365A8603596A4C5C435C5 (void);
+// 0x00000028 System.Void GameDirector/<tamaRamen>d__29::.ctor(System.Int32)
+extern void U3CtamaRamenU3Ed__29__ctor_m096E98423798F2DB8C9A2D3D031A029060EF50FF (void);
+// 0x00000029 System.Void GameDirector/<tamaRamen>d__29::System.IDisposable.Dispose()
+extern void U3CtamaRamenU3Ed__29_System_IDisposable_Dispose_mE60168AD96AC6E4EB762760E301BB5F6F591AE29 (void);
+// 0x0000002A System.Boolean GameDirector/<tamaRamen>d__29::MoveNext()
+extern void U3CtamaRamenU3Ed__29_MoveNext_m4E57673F2EE9DE9DEF974070F9EC81B92F922C9D (void);
+// 0x0000002B System.Object GameDirector/<tamaRamen>d__29::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaRamenU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m42FCEE9C4CA475EBBDB985D0663FE1501E8CE756 (void);
+// 0x0000002C System.Void GameDirector/<tamaRamen>d__29::System.Collections.IEnumerator.Reset()
+extern void U3CtamaRamenU3Ed__29_System_Collections_IEnumerator_Reset_mB2A9DFA0D50267B19C2BA4A8C37A83814704162C (void);
+// 0x0000002D System.Object GameDirector/<tamaRamen>d__29::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaRamenU3Ed__29_System_Collections_IEnumerator_get_Current_m104625AFD1A403A9397BF936305FFD715BAC195D (void);
+// 0x0000002E System.Void GameDirector/<tamaSushi>d__30::.ctor(System.Int32)
+extern void U3CtamaSushiU3Ed__30__ctor_mAAD26099321FFD74F938876C0B3EEEE93E58EB42 (void);
+// 0x0000002F System.Void GameDirector/<tamaSushi>d__30::System.IDisposable.Dispose()
+extern void U3CtamaSushiU3Ed__30_System_IDisposable_Dispose_mA39B27AAD56E6A750094EB8E5C0032DAAC2BC299 (void);
+// 0x00000030 System.Boolean GameDirector/<tamaSushi>d__30::MoveNext()
+extern void U3CtamaSushiU3Ed__30_MoveNext_m88C1902C6F85842336F791BC97FFBD00849B57C9 (void);
+// 0x00000031 System.Object GameDirector/<tamaSushi>d__30::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaSushiU3Ed__30_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6E2CC0DC71AA7E6D130113AEAF7F273EF6F60EF3 (void);
+// 0x00000032 System.Void GameDirector/<tamaSushi>d__30::System.Collections.IEnumerator.Reset()
+extern void U3CtamaSushiU3Ed__30_System_Collections_IEnumerator_Reset_m24BAA108E8B5BD70BBEF346627AEBDBF4CF7BC3C (void);
+// 0x00000033 System.Object GameDirector/<tamaSushi>d__30::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaSushiU3Ed__30_System_Collections_IEnumerator_get_Current_m1B3DA1B2500741842488B48CAE6B406392794D15 (void);
+// 0x00000034 System.Void GameDirector/<tamaUnagi>d__31::.ctor(System.Int32)
+extern void U3CtamaUnagiU3Ed__31__ctor_m73AB9A94489EBEB2FAECFD093119A9E094450B26 (void);
+// 0x00000035 System.Void GameDirector/<tamaUnagi>d__31::System.IDisposable.Dispose()
+extern void U3CtamaUnagiU3Ed__31_System_IDisposable_Dispose_m20DDA0EA0BDEE8D0E8230D38C2BA790A97A051A2 (void);
+// 0x00000036 System.Boolean GameDirector/<tamaUnagi>d__31::MoveNext()
+extern void U3CtamaUnagiU3Ed__31_MoveNext_m599430CC1336D5AD67A78B34A3A7125C22A6EE85 (void);
+// 0x00000037 System.Object GameDirector/<tamaUnagi>d__31::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaUnagiU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2795C937BF42A7B36F398546D68B9F951610E4C9 (void);
+// 0x00000038 System.Void GameDirector/<tamaUnagi>d__31::System.Collections.IEnumerator.Reset()
+extern void U3CtamaUnagiU3Ed__31_System_Collections_IEnumerator_Reset_mFB5E2841F292920C15AA1AAA0A87123A5493D674 (void);
+// 0x00000039 System.Object GameDirector/<tamaUnagi>d__31::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaUnagiU3Ed__31_System_Collections_IEnumerator_get_Current_mEE81AAA7BAF811C399A1B994A8FCC39AA93213CC (void);
+// 0x0000003A System.Void GameDirector/<tamaPramo>d__32::.ctor(System.Int32)
+extern void U3CtamaPramoU3Ed__32__ctor_m84641256A09F318109D80D8AAB48F4FFDD488047 (void);
+// 0x0000003B System.Void GameDirector/<tamaPramo>d__32::System.IDisposable.Dispose()
+extern void U3CtamaPramoU3Ed__32_System_IDisposable_Dispose_m038EE330405B910B8A527469BACA516B02488BFF (void);
+// 0x0000003C System.Boolean GameDirector/<tamaPramo>d__32::MoveNext()
+extern void U3CtamaPramoU3Ed__32_MoveNext_mE64E563C06916ED30F9FC14F9AE2385755247657 (void);
+// 0x0000003D System.Object GameDirector/<tamaPramo>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaPramoU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m454293D4DB79CB4C0D64B1FEEA4FC44A026D6792 (void);
+// 0x0000003E System.Void GameDirector/<tamaPramo>d__32::System.Collections.IEnumerator.Reset()
+extern void U3CtamaPramoU3Ed__32_System_Collections_IEnumerator_Reset_m11C7B742BFEF859FED04048AEAC311CCC8CA639B (void);
+// 0x0000003F System.Object GameDirector/<tamaPramo>d__32::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaPramoU3Ed__32_System_Collections_IEnumerator_get_Current_m61EA12CA6A58B6ED5DA40EE2BC668859A5F87201 (void);
+// 0x00000040 System.Void GameDirector/<tamaIyaiya>d__33::.ctor(System.Int32)
+extern void U3CtamaIyaiyaU3Ed__33__ctor_m01C23B63ADC6D2C500E7D9636EB2F69068113518 (void);
+// 0x00000041 System.Void GameDirector/<tamaIyaiya>d__33::System.IDisposable.Dispose()
+extern void U3CtamaIyaiyaU3Ed__33_System_IDisposable_Dispose_m77DE1A7F067C4F435312BF401B4E7380C1CB05D4 (void);
+// 0x00000042 System.Boolean GameDirector/<tamaIyaiya>d__33::MoveNext()
+extern void U3CtamaIyaiyaU3Ed__33_MoveNext_mFDBBE58619E669DF98B05CD4A97C8149708F883D (void);
+// 0x00000043 System.Object GameDirector/<tamaIyaiya>d__33::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaIyaiyaU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m47E81686FBF1EB4908964E799B5304DA51923A53 (void);
+// 0x00000044 System.Void GameDirector/<tamaIyaiya>d__33::System.Collections.IEnumerator.Reset()
+extern void U3CtamaIyaiyaU3Ed__33_System_Collections_IEnumerator_Reset_m3A2D6BE0DA770BA2E4B1102CC79BC0CD2C6CCC31 (void);
+// 0x00000045 System.Object GameDirector/<tamaIyaiya>d__33::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaIyaiyaU3Ed__33_System_Collections_IEnumerator_get_Current_m42908B91F5CBC79478B3BA4B8E4CEC20D6F1DFB1 (void);
+// 0x00000046 System.Void GameDirector/<tamaBath>d__34::.ctor(System.Int32)
+extern void U3CtamaBathU3Ed__34__ctor_m32CDA1EE4159215622E5BA123CC1E22A7B387AFF (void);
+// 0x00000047 System.Void GameDirector/<tamaBath>d__34::System.IDisposable.Dispose()
+extern void U3CtamaBathU3Ed__34_System_IDisposable_Dispose_m83EAF0391EA2AD89A197F02C80D7CBC54CBA215C (void);
+// 0x00000048 System.Boolean GameDirector/<tamaBath>d__34::MoveNext()
+extern void U3CtamaBathU3Ed__34_MoveNext_m14A3EAEB3557914793FBC6EB12C866688D08E9E1 (void);
+// 0x00000049 System.Object GameDirector/<tamaBath>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaBathU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m26F5870FB6CC7514E155D3E424B0D28C01E9226F (void);
+// 0x0000004A System.Void GameDirector/<tamaBath>d__34::System.Collections.IEnumerator.Reset()
+extern void U3CtamaBathU3Ed__34_System_Collections_IEnumerator_Reset_mD25B41C5380419872B515D1C9BC55FFEDD4E4410 (void);
+// 0x0000004B System.Object GameDirector/<tamaBath>d__34::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaBathU3Ed__34_System_Collections_IEnumerator_get_Current_m1022266E3CB0F6D8605BE673BCFD4FDE58666278 (void);
+// 0x0000004C System.Void GameDirector/<tamaGuitar>d__35::.ctor(System.Int32)
+extern void U3CtamaGuitarU3Ed__35__ctor_m8BA0A63EF2BECE62CF3B59CE5027E4E64783A58B (void);
+// 0x0000004D System.Void GameDirector/<tamaGuitar>d__35::System.IDisposable.Dispose()
+extern void U3CtamaGuitarU3Ed__35_System_IDisposable_Dispose_m0E4F57A57BB09BD59D37DDB08110287C65F6D0D1 (void);
+// 0x0000004E System.Boolean GameDirector/<tamaGuitar>d__35::MoveNext()
+extern void U3CtamaGuitarU3Ed__35_MoveNext_mE4A3E3882BEEEE5FBD8D34273099D42DADD9B3CD (void);
+// 0x0000004F System.Object GameDirector/<tamaGuitar>d__35::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaGuitarU3Ed__35_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m685B2F7C7AFCDA444AF89F5150692A1D224017E7 (void);
+// 0x00000050 System.Void GameDirector/<tamaGuitar>d__35::System.Collections.IEnumerator.Reset()
+extern void U3CtamaGuitarU3Ed__35_System_Collections_IEnumerator_Reset_mBBC1907556E3D9B3770DF20265F12B83152C6D29 (void);
+// 0x00000051 System.Object GameDirector/<tamaGuitar>d__35::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaGuitarU3Ed__35_System_Collections_IEnumerator_get_Current_m0E1C352E9B45A7E8FBCD9F8306853D9D455751E2 (void);
+// 0x00000052 System.Void GameDirector/<tamaTuho>d__36::.ctor(System.Int32)
+extern void U3CtamaTuhoU3Ed__36__ctor_mD4BD8FDE8031BC36283CF67B3A18BB905C1D392E (void);
+// 0x00000053 System.Void GameDirector/<tamaTuho>d__36::System.IDisposable.Dispose()
+extern void U3CtamaTuhoU3Ed__36_System_IDisposable_Dispose_mFBF92C2842FD75ABBF3E33B0CAB03B6AFD155FD0 (void);
+// 0x00000054 System.Boolean GameDirector/<tamaTuho>d__36::MoveNext()
+extern void U3CtamaTuhoU3Ed__36_MoveNext_mFDF0E96406D57FC200DC7688854E2B9EE3AA55D4 (void);
+// 0x00000055 System.Object GameDirector/<tamaTuho>d__36::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaTuhoU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8B6E19C00E44D65D0A6F0AB489996A6E877179D7 (void);
+// 0x00000056 System.Void GameDirector/<tamaTuho>d__36::System.Collections.IEnumerator.Reset()
+extern void U3CtamaTuhoU3Ed__36_System_Collections_IEnumerator_Reset_m6E82F5A78D3174AA6AE0C38EEB2A313BD80A055A (void);
+// 0x00000057 System.Object GameDirector/<tamaTuho>d__36::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaTuhoU3Ed__36_System_Collections_IEnumerator_get_Current_m1C3E763FA579028BC6058992E5180ACFF7692BEA (void);
+// 0x00000058 System.Void GameDirector/<tamaInitReset>d__37::.ctor(System.Int32)
+extern void U3CtamaInitResetU3Ed__37__ctor_m2ADF33297C33657615E3F40481855AE64E7EDA9F (void);
+// 0x00000059 System.Void GameDirector/<tamaInitReset>d__37::System.IDisposable.Dispose()
+extern void U3CtamaInitResetU3Ed__37_System_IDisposable_Dispose_m6B26794FDC2CD15255F4D44DD99A2E7B98FE5F3A (void);
+// 0x0000005A System.Boolean GameDirector/<tamaInitReset>d__37::MoveNext()
+extern void U3CtamaInitResetU3Ed__37_MoveNext_mE68AC05F8604B6F1D6C214AD4C25BEAC525DCD64 (void);
+// 0x0000005B System.Object GameDirector/<tamaInitReset>d__37::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaInitResetU3Ed__37_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB8D3920DAE4F5E205989AD027865E96BA88162CB (void);
+// 0x0000005C System.Void GameDirector/<tamaInitReset>d__37::System.Collections.IEnumerator.Reset()
+extern void U3CtamaInitResetU3Ed__37_System_Collections_IEnumerator_Reset_m024A62F127C363D43DA1D4F9434AE11783B45281 (void);
+// 0x0000005D System.Object GameDirector/<tamaInitReset>d__37::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaInitResetU3Ed__37_System_Collections_IEnumerator_get_Current_mD4299AA9AC60454DBB3CD2528E7883ED690EADED (void);
+// 0x0000005E System.Void GameDirector/<tamaLast>d__38::.ctor(System.Int32)
+extern void U3CtamaLastU3Ed__38__ctor_m0A3203823904033317C84C84310C9EB989A3B08E (void);
+// 0x0000005F System.Void GameDirector/<tamaLast>d__38::System.IDisposable.Dispose()
+extern void U3CtamaLastU3Ed__38_System_IDisposable_Dispose_m664ECBA79860C53264A2D19E15DA78BE4EAF5641 (void);
+// 0x00000060 System.Boolean GameDirector/<tamaLast>d__38::MoveNext()
+extern void U3CtamaLastU3Ed__38_MoveNext_m0E06BB0A9874DA249ED34501EF960FD65F3E2096 (void);
+// 0x00000061 System.Object GameDirector/<tamaLast>d__38::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CtamaLastU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m779D08DA315A03B2F9941C95BACA54C20F09824D (void);
+// 0x00000062 System.Void GameDirector/<tamaLast>d__38::System.Collections.IEnumerator.Reset()
+extern void U3CtamaLastU3Ed__38_System_Collections_IEnumerator_Reset_m855EE1269856615803F96C42362A21798AC1E77D (void);
+// 0x00000063 System.Object GameDirector/<tamaLast>d__38::System.Collections.IEnumerator.get_Current()
+extern void U3CtamaLastU3Ed__38_System_Collections_IEnumerator_get_Current_m6B44DF9E09FC01217B6C8129CC787F06763A3771 (void);
+static Il2CppMethodPointer s_methodPointers[99] = 
 {
 	button_A_Ctrl_onClick_m919C012C2E3EE6FA9DCFA6944A4CA336C4E31814,
 	button_A_Ctrl__ctor_mC1AC1153812920120001EC5EA7389F20E0C0ADDE,
 	button_B_Ctrl_onClick_m9437082C772313A8CA65D559C992FE47C2EC2411,
 	button_B_Ctrl__ctor_m86938A57FF61A61228BE792BB5D99A16BB54A149,
+	button_R_Ctrl_onClick_m66AD0673E62D61F6311ED70F2E23804FD7A4B656,
+	button_R_Ctrl__ctor_m1969F592D81814EE35E0973BAD283C879A480F1A,
+	button_Z_Ctrl_onClick_mE1287010F019CDF31E7DFAD305CB1AC0AF5D84EE,
+	button_Z_Ctrl__ctor_mFDB48FC2A0C2B5D4D6673A4E9055B64C16B468A4,
 	cross_Down_Ctrl_onClick_mFF4C239EED8454C214A64026D11C172B1D46BE2B,
 	cross_Down_Ctrl__ctor_m72E6A73335FD7A415FCB8C5B8155E6F179ABA84A,
 	cross_up_Ctrl_onClick_mB75503EB4BAE8CC1AC0017C61003C28034F715B1,
@@ -227,182 +239,186 @@ static Il2CppMethodPointer s_methodPointers[95] =
 	GameDirector_tamaInitReset_m7035B094D3F964A766AE5886CDA46D7A610AE0C9,
 	GameDirector_tamaLast_mEB5C984DA7F213830E4058FA0043BF4A360BF8E3,
 	GameDirector__ctor_m11BFC3A4A757A802BDD31DFC5E5F1D19E54DF1DD,
-	U3CtamaFukaU3Ed__22__ctor_m7DB86B33354D8848652F616518682169FF27B6CA,
-	U3CtamaFukaU3Ed__22_System_IDisposable_Dispose_mF8D17157E9F55DFD4D1E3CB547416287CA1CA175,
-	U3CtamaFukaU3Ed__22_MoveNext_m4C4F54E214375798637FAC8ABDDF8E5852ED3049,
-	U3CtamaFukaU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m56E198851852CB4BD891578D9AB1C73F5B001B71,
-	U3CtamaFukaU3Ed__22_System_Collections_IEnumerator_Reset_mC408F59A8A34088A6064072C968869096FB69AF5,
-	U3CtamaFukaU3Ed__22_System_Collections_IEnumerator_get_Current_mEA71E08C4561EB1CD4C0471FF81C2D1BC9156AEC,
-	U3CtamaNattoU3Ed__23__ctor_m839130985443F141508B9AC64E099B83519F21A3,
-	U3CtamaNattoU3Ed__23_System_IDisposable_Dispose_m1D0CB1731B12BCC98F34EF6916D722AC1C62C1C5,
-	U3CtamaNattoU3Ed__23_MoveNext_m1D20C0D7B7BBE2E39CEC668208A0450C98734018,
-	U3CtamaNattoU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6E329B8BD17789849CB12236C75D3A8010FE632E,
-	U3CtamaNattoU3Ed__23_System_Collections_IEnumerator_Reset_m05AF8E2B17B398354F721E66854852CC3FEB9398,
-	U3CtamaNattoU3Ed__23_System_Collections_IEnumerator_get_Current_m15413C2576F528534EAB1E86F6C499D8E987E385,
-	U3CtamaRamenU3Ed__24__ctor_m6D86029DA59FC12086BC1AEE8FFCB3AD4C933D0D,
-	U3CtamaRamenU3Ed__24_System_IDisposable_Dispose_m4FDA34CD99E9CECD31AAF1A88D3170FC5045494B,
-	U3CtamaRamenU3Ed__24_MoveNext_mDCA61F3D74A3F4E1B24954C93AF5D17DB6796CCA,
-	U3CtamaRamenU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC08EA4FB7CB57B0256123C61D099CCBFE50D71C4,
-	U3CtamaRamenU3Ed__24_System_Collections_IEnumerator_Reset_mBABD0C08477EE5BF191BDA9E56CEACAC91D1B0D5,
-	U3CtamaRamenU3Ed__24_System_Collections_IEnumerator_get_Current_mE15582B0EB8DC2EE64ABF1559EA055FA65E519A1,
-	U3CtamaSushiU3Ed__25__ctor_m41CECF393DDB9F99EAA6C29FB19EDE4B8EB89EF7,
-	U3CtamaSushiU3Ed__25_System_IDisposable_Dispose_mD0F49FF8A8DAF509AFF57E5FF75C6DE60C98D324,
-	U3CtamaSushiU3Ed__25_MoveNext_m6B6C8B4EFD05F18B50461C250C2081E15CF49346,
-	U3CtamaSushiU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAA7F9AFB2501E6BFA684B101EBE4FDF9E059A577,
-	U3CtamaSushiU3Ed__25_System_Collections_IEnumerator_Reset_m6C3F1B3FFD25ED602C00592030E333A49CD963BB,
-	U3CtamaSushiU3Ed__25_System_Collections_IEnumerator_get_Current_m3C4600A0AB44DA3D931312C5CF087FD55FEE4C29,
-	U3CtamaUnagiU3Ed__26__ctor_mECDCD72D26B3B83D4D4C80708797EBF591C017FE,
-	U3CtamaUnagiU3Ed__26_System_IDisposable_Dispose_mD4A259A51342C471E7DFCF0804A3DB6D5EBD7C3F,
-	U3CtamaUnagiU3Ed__26_MoveNext_m500597E1E0F22B068E5DCF0E83626DC41021612D,
-	U3CtamaUnagiU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFF8914EA626B5F6EFC337CC0FB658098F6E6BEAE,
-	U3CtamaUnagiU3Ed__26_System_Collections_IEnumerator_Reset_mF42FB215F340BC4E891E233F6483E9F1B8F3974F,
-	U3CtamaUnagiU3Ed__26_System_Collections_IEnumerator_get_Current_mDDB149CE801327554FA200DDD7F18D448503AAB3,
-	U3CtamaPramoU3Ed__27__ctor_mBE12D9AF3A1FA29FC58D98087739C6719D38F40D,
-	U3CtamaPramoU3Ed__27_System_IDisposable_Dispose_m896F4F47AD6858CF71C47B16D5BF9295D68EA334,
-	U3CtamaPramoU3Ed__27_MoveNext_mD452DFD220E236C398BCB68FD5DA15061F37E723,
-	U3CtamaPramoU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9D961B0DD4529B4BEDF2FBCE4014C0486554E623,
-	U3CtamaPramoU3Ed__27_System_Collections_IEnumerator_Reset_mFCE6993D46B16EFAEE584D1242998A0F38EE6186,
-	U3CtamaPramoU3Ed__27_System_Collections_IEnumerator_get_Current_m5476C0BDFE27B748388DC7A92382E6541E87046D,
-	U3CtamaIyaiyaU3Ed__28__ctor_m3D90971146A5343504928E156337C5744BEA3C00,
-	U3CtamaIyaiyaU3Ed__28_System_IDisposable_Dispose_mFA506E3CAF3554697827F2B0DBB04CC3F23FF735,
-	U3CtamaIyaiyaU3Ed__28_MoveNext_mE5305E01ED0F7C0A52180B8FDBC7057CBD1AE731,
-	U3CtamaIyaiyaU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46CEFD517C56A5A3ADE6B52CED78DD633424340C,
-	U3CtamaIyaiyaU3Ed__28_System_Collections_IEnumerator_Reset_m67A3B10726BA1DEFA4CD72B0258699FA2FE1616E,
-	U3CtamaIyaiyaU3Ed__28_System_Collections_IEnumerator_get_Current_mD373D84ED58CA488EAB8EBCC5E4E91E56A6905DF,
-	U3CtamaBathU3Ed__29__ctor_m868FFC744FF727600D6DC235D5094FF2AD88F17D,
-	U3CtamaBathU3Ed__29_System_IDisposable_Dispose_mE36ADFBB8950C25AAC13BEC7AB3A0D5D21D32D49,
-	U3CtamaBathU3Ed__29_MoveNext_m07C7ADD8E18457DE1B9D72BD4A41D6149F35C4E8,
-	U3CtamaBathU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8DDFA01C0B880398731D244035770E8D7D2ABA52,
-	U3CtamaBathU3Ed__29_System_Collections_IEnumerator_Reset_m66D829F512E0740672966E4B6DF46CA88210F5D2,
-	U3CtamaBathU3Ed__29_System_Collections_IEnumerator_get_Current_mA1BC6A46B389C341C34D7B0CB4C24EEE15650340,
-	U3CtamaGuitarU3Ed__30__ctor_mF7B870CF11B8244520516715D0A02BBB2EC04C98,
-	U3CtamaGuitarU3Ed__30_System_IDisposable_Dispose_m0F3857D53705D55413144ACED0FCDCB77DDF01B2,
-	U3CtamaGuitarU3Ed__30_MoveNext_m387EC85F707DA89743A7740F621A9779D98E3410,
-	U3CtamaGuitarU3Ed__30_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD654251C1AF24ABC80CB353A3186F5A90E95E033,
-	U3CtamaGuitarU3Ed__30_System_Collections_IEnumerator_Reset_m41CB01305CF7FEC8937E43433B8A69237A61D2E6,
-	U3CtamaGuitarU3Ed__30_System_Collections_IEnumerator_get_Current_mDA3A26E1CC2262050FE89C580F4C09551932BE6C,
-	U3CtamaTuhoU3Ed__31__ctor_mCCF81D72ABC8E1950571C4A3FF60A77BAD9FDEFC,
-	U3CtamaTuhoU3Ed__31_System_IDisposable_Dispose_m34DBCC33B71A851DC87536A812E2D1E35A3140C3,
-	U3CtamaTuhoU3Ed__31_MoveNext_mC0524B4EA0CB27FC6AC8168AF148510AD21DC2D0,
-	U3CtamaTuhoU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6BCA72BCC5F57A7BB9D93DB43529CC72CA3283E9,
-	U3CtamaTuhoU3Ed__31_System_Collections_IEnumerator_Reset_m9FA8CC0E0F3567C034CC556FAA7665CC1D79A99C,
-	U3CtamaTuhoU3Ed__31_System_Collections_IEnumerator_get_Current_m0CDB81630C36D347E0B198744AE9D2D9A6657EC9,
-	U3CtamaInitResetU3Ed__32__ctor_m825EF7005155B5D2761A40FCFCD03B196E52711D,
-	U3CtamaInitResetU3Ed__32_System_IDisposable_Dispose_m8D3F911E5284E3B66A2C1C6FC7E9008F77259FA6,
-	U3CtamaInitResetU3Ed__32_MoveNext_mA4026C448D10E30C06AE2A511E43CB19BC78DC1E,
-	U3CtamaInitResetU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m48A534E5FEDE478EC94BD171C9BF70DE23B348B0,
-	U3CtamaInitResetU3Ed__32_System_Collections_IEnumerator_Reset_m85D23D4B982611030D877F5AE1A1A6A88AF7A086,
-	U3CtamaInitResetU3Ed__32_System_Collections_IEnumerator_get_Current_m34A29CD80678B2FB2D5381AF874F3A9C70BCDB2B,
-	U3CtamaLastU3Ed__33__ctor_mCD7FCCB406D7D4B9C319EA73AF7D6F0C14F2168C,
-	U3CtamaLastU3Ed__33_System_IDisposable_Dispose_m36C9578A5F3A10ECE508D76C91C8514117559F9F,
-	U3CtamaLastU3Ed__33_MoveNext_m0B3BAC8EA915C882E6182ACE3036E0778E51F6C3,
-	U3CtamaLastU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5C6FF65710F4CA8ED15F3173CDA9D1398B816D51,
-	U3CtamaLastU3Ed__33_System_Collections_IEnumerator_Reset_m00D9CC20ABD3A91FBEA1F68DD4D3EEF154047FF7,
-	U3CtamaLastU3Ed__33_System_Collections_IEnumerator_get_Current_m496E59351901AB9F318702630BB6CCAE5AC5165F,
+	U3CtamaFukaU3Ed__27__ctor_mAA940143BFBF5CA6BF00EF81980E6C16586FB456,
+	U3CtamaFukaU3Ed__27_System_IDisposable_Dispose_m55FA13F3EC5D8C92CBE32433C0F654B4BA75764A,
+	U3CtamaFukaU3Ed__27_MoveNext_mDDAF47ECC0CF4A220A12314BF451145B07170E29,
+	U3CtamaFukaU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46C33A5D45D6EA513E84F76BF3F8ED52D4DE995F,
+	U3CtamaFukaU3Ed__27_System_Collections_IEnumerator_Reset_mF1CB9D97A2D46DAF425439C5DCD40C8F12DCD882,
+	U3CtamaFukaU3Ed__27_System_Collections_IEnumerator_get_Current_mE657F4FF880BBB4F750013358B37E050BE579525,
+	U3CtamaNattoU3Ed__28__ctor_m87D97B0294F4826247DE4C3324B3E50B33B70241,
+	U3CtamaNattoU3Ed__28_System_IDisposable_Dispose_mB2D4CB4791530298DAA34DE6F417E338F7D9A1CD,
+	U3CtamaNattoU3Ed__28_MoveNext_m07FB7943B97460F72DEC7F04E3A4C998C7E62470,
+	U3CtamaNattoU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2732543642755530CD3720A08C03535F270AC095,
+	U3CtamaNattoU3Ed__28_System_Collections_IEnumerator_Reset_mB932FCA8C9C6E3AE34F0F081CD52747181F17142,
+	U3CtamaNattoU3Ed__28_System_Collections_IEnumerator_get_Current_m68D97557CB40AA11F17365A8603596A4C5C435C5,
+	U3CtamaRamenU3Ed__29__ctor_m096E98423798F2DB8C9A2D3D031A029060EF50FF,
+	U3CtamaRamenU3Ed__29_System_IDisposable_Dispose_mE60168AD96AC6E4EB762760E301BB5F6F591AE29,
+	U3CtamaRamenU3Ed__29_MoveNext_m4E57673F2EE9DE9DEF974070F9EC81B92F922C9D,
+	U3CtamaRamenU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m42FCEE9C4CA475EBBDB985D0663FE1501E8CE756,
+	U3CtamaRamenU3Ed__29_System_Collections_IEnumerator_Reset_mB2A9DFA0D50267B19C2BA4A8C37A83814704162C,
+	U3CtamaRamenU3Ed__29_System_Collections_IEnumerator_get_Current_m104625AFD1A403A9397BF936305FFD715BAC195D,
+	U3CtamaSushiU3Ed__30__ctor_mAAD26099321FFD74F938876C0B3EEEE93E58EB42,
+	U3CtamaSushiU3Ed__30_System_IDisposable_Dispose_mA39B27AAD56E6A750094EB8E5C0032DAAC2BC299,
+	U3CtamaSushiU3Ed__30_MoveNext_m88C1902C6F85842336F791BC97FFBD00849B57C9,
+	U3CtamaSushiU3Ed__30_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6E2CC0DC71AA7E6D130113AEAF7F273EF6F60EF3,
+	U3CtamaSushiU3Ed__30_System_Collections_IEnumerator_Reset_m24BAA108E8B5BD70BBEF346627AEBDBF4CF7BC3C,
+	U3CtamaSushiU3Ed__30_System_Collections_IEnumerator_get_Current_m1B3DA1B2500741842488B48CAE6B406392794D15,
+	U3CtamaUnagiU3Ed__31__ctor_m73AB9A94489EBEB2FAECFD093119A9E094450B26,
+	U3CtamaUnagiU3Ed__31_System_IDisposable_Dispose_m20DDA0EA0BDEE8D0E8230D38C2BA790A97A051A2,
+	U3CtamaUnagiU3Ed__31_MoveNext_m599430CC1336D5AD67A78B34A3A7125C22A6EE85,
+	U3CtamaUnagiU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2795C937BF42A7B36F398546D68B9F951610E4C9,
+	U3CtamaUnagiU3Ed__31_System_Collections_IEnumerator_Reset_mFB5E2841F292920C15AA1AAA0A87123A5493D674,
+	U3CtamaUnagiU3Ed__31_System_Collections_IEnumerator_get_Current_mEE81AAA7BAF811C399A1B994A8FCC39AA93213CC,
+	U3CtamaPramoU3Ed__32__ctor_m84641256A09F318109D80D8AAB48F4FFDD488047,
+	U3CtamaPramoU3Ed__32_System_IDisposable_Dispose_m038EE330405B910B8A527469BACA516B02488BFF,
+	U3CtamaPramoU3Ed__32_MoveNext_mE64E563C06916ED30F9FC14F9AE2385755247657,
+	U3CtamaPramoU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m454293D4DB79CB4C0D64B1FEEA4FC44A026D6792,
+	U3CtamaPramoU3Ed__32_System_Collections_IEnumerator_Reset_m11C7B742BFEF859FED04048AEAC311CCC8CA639B,
+	U3CtamaPramoU3Ed__32_System_Collections_IEnumerator_get_Current_m61EA12CA6A58B6ED5DA40EE2BC668859A5F87201,
+	U3CtamaIyaiyaU3Ed__33__ctor_m01C23B63ADC6D2C500E7D9636EB2F69068113518,
+	U3CtamaIyaiyaU3Ed__33_System_IDisposable_Dispose_m77DE1A7F067C4F435312BF401B4E7380C1CB05D4,
+	U3CtamaIyaiyaU3Ed__33_MoveNext_mFDBBE58619E669DF98B05CD4A97C8149708F883D,
+	U3CtamaIyaiyaU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m47E81686FBF1EB4908964E799B5304DA51923A53,
+	U3CtamaIyaiyaU3Ed__33_System_Collections_IEnumerator_Reset_m3A2D6BE0DA770BA2E4B1102CC79BC0CD2C6CCC31,
+	U3CtamaIyaiyaU3Ed__33_System_Collections_IEnumerator_get_Current_m42908B91F5CBC79478B3BA4B8E4CEC20D6F1DFB1,
+	U3CtamaBathU3Ed__34__ctor_m32CDA1EE4159215622E5BA123CC1E22A7B387AFF,
+	U3CtamaBathU3Ed__34_System_IDisposable_Dispose_m83EAF0391EA2AD89A197F02C80D7CBC54CBA215C,
+	U3CtamaBathU3Ed__34_MoveNext_m14A3EAEB3557914793FBC6EB12C866688D08E9E1,
+	U3CtamaBathU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m26F5870FB6CC7514E155D3E424B0D28C01E9226F,
+	U3CtamaBathU3Ed__34_System_Collections_IEnumerator_Reset_mD25B41C5380419872B515D1C9BC55FFEDD4E4410,
+	U3CtamaBathU3Ed__34_System_Collections_IEnumerator_get_Current_m1022266E3CB0F6D8605BE673BCFD4FDE58666278,
+	U3CtamaGuitarU3Ed__35__ctor_m8BA0A63EF2BECE62CF3B59CE5027E4E64783A58B,
+	U3CtamaGuitarU3Ed__35_System_IDisposable_Dispose_m0E4F57A57BB09BD59D37DDB08110287C65F6D0D1,
+	U3CtamaGuitarU3Ed__35_MoveNext_mE4A3E3882BEEEE5FBD8D34273099D42DADD9B3CD,
+	U3CtamaGuitarU3Ed__35_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m685B2F7C7AFCDA444AF89F5150692A1D224017E7,
+	U3CtamaGuitarU3Ed__35_System_Collections_IEnumerator_Reset_mBBC1907556E3D9B3770DF20265F12B83152C6D29,
+	U3CtamaGuitarU3Ed__35_System_Collections_IEnumerator_get_Current_m0E1C352E9B45A7E8FBCD9F8306853D9D455751E2,
+	U3CtamaTuhoU3Ed__36__ctor_mD4BD8FDE8031BC36283CF67B3A18BB905C1D392E,
+	U3CtamaTuhoU3Ed__36_System_IDisposable_Dispose_mFBF92C2842FD75ABBF3E33B0CAB03B6AFD155FD0,
+	U3CtamaTuhoU3Ed__36_MoveNext_mFDF0E96406D57FC200DC7688854E2B9EE3AA55D4,
+	U3CtamaTuhoU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8B6E19C00E44D65D0A6F0AB489996A6E877179D7,
+	U3CtamaTuhoU3Ed__36_System_Collections_IEnumerator_Reset_m6E82F5A78D3174AA6AE0C38EEB2A313BD80A055A,
+	U3CtamaTuhoU3Ed__36_System_Collections_IEnumerator_get_Current_m1C3E763FA579028BC6058992E5180ACFF7692BEA,
+	U3CtamaInitResetU3Ed__37__ctor_m2ADF33297C33657615E3F40481855AE64E7EDA9F,
+	U3CtamaInitResetU3Ed__37_System_IDisposable_Dispose_m6B26794FDC2CD15255F4D44DD99A2E7B98FE5F3A,
+	U3CtamaInitResetU3Ed__37_MoveNext_mE68AC05F8604B6F1D6C214AD4C25BEAC525DCD64,
+	U3CtamaInitResetU3Ed__37_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB8D3920DAE4F5E205989AD027865E96BA88162CB,
+	U3CtamaInitResetU3Ed__37_System_Collections_IEnumerator_Reset_m024A62F127C363D43DA1D4F9434AE11783B45281,
+	U3CtamaInitResetU3Ed__37_System_Collections_IEnumerator_get_Current_mD4299AA9AC60454DBB3CD2528E7883ED690EADED,
+	U3CtamaLastU3Ed__38__ctor_m0A3203823904033317C84C84310C9EB989A3B08E,
+	U3CtamaLastU3Ed__38_System_IDisposable_Dispose_m664ECBA79860C53264A2D19E15DA78BE4EAF5641,
+	U3CtamaLastU3Ed__38_MoveNext_m0E06BB0A9874DA249ED34501EF960FD65F3E2096,
+	U3CtamaLastU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m779D08DA315A03B2F9941C95BACA54C20F09824D,
+	U3CtamaLastU3Ed__38_System_Collections_IEnumerator_Reset_m855EE1269856615803F96C42362A21798AC1E77D,
+	U3CtamaLastU3Ed__38_System_Collections_IEnumerator_get_Current_m6B44DF9E09FC01217B6C8129CC787F06763A3771,
 };
-static const int32_t s_InvokerIndices[95] = 
+static const int32_t s_InvokerIndices[99] = 
 {
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3205,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3124,
-	3205,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
-	2606,
-	3205,
-	3069,
-	3124,
-	3205,
-	3124,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3207,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3126,
+	3207,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
+	2608,
+	3207,
+	3071,
+	3126,
+	3207,
+	3126,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	95,
+	99,
 	s_methodPointers,
 	0,
 	NULL,

@@ -13,6 +13,7 @@ public class GameDirector : MonoBehaviour
     private int resetCounter;                   // リセット画面カウンター
     private float remainTime = 72.999f;         // 残り時間
     private int manpukuRate;                    // 満腹度
+    private int[] selected = new int[10];       // コマンド選択回数
 
     // ゲームオブジェクト
     GameObject[] cursor = new GameObject[5];
@@ -22,6 +23,7 @@ public class GameDirector : MonoBehaviour
     GameObject t_guage;
     GameObject henshin;
     GameObject last;
+    GameObject last07;
     GameObject button_R;
     GameObject button_Z;
 
@@ -29,6 +31,7 @@ public class GameDirector : MonoBehaviour
     public Sprite[] t_disp = new Sprite[7];     // 時間メーター
     public Sprite[] s_disp = new Sprite[7];     // 満腹メーター
     public Sprite[] tamaReset = new Sprite[4];  // リセット画面
+    public Sprite[] last_form = new Sprite[7];  // 最終形態
 
     // アニメーター
     Animator animatorTama;
@@ -49,6 +52,7 @@ public class GameDirector : MonoBehaviour
         t_guage = GameObject.Find("t_guage");
         henshin = GameObject.Find("henshin");
         last = GameObject.Find("last");
+        last07 = GameObject.Find("last07");
         button_R = GameObject.Find("button_R");
         button_Z = GameObject.Find("button_Z");
 
@@ -57,9 +61,15 @@ public class GameDirector : MonoBehaviour
         animatorHenshin = henshin.GetComponent<Animator>();
 
         // カーソル表示の初期化
-        for (int i=0; i<5; i++)
+        for(int i=0; i<5; i++)
         {
             cursor[i].SetActive(false);
+        }
+
+        // 選択回数の初期化
+        for(int i=0; i<10; i++)
+        {
+            selected[i] = 0;
         }
 
         // ボタンフラグと通常モードの準備
@@ -85,7 +95,7 @@ public class GameDirector : MonoBehaviour
     void Update()
     {
         // デバッグ用
-        // Debug.Log(tamaMode + "," + resetCounter + "," + cursorPos);
+        // Debug.Log(selected[0] + "," + selected[1] + "," + selected[7]);
 
         // 時間経過
         remainTime -= Time.deltaTime;
@@ -166,16 +176,19 @@ public class GameDirector : MonoBehaviour
 
                             // お風呂
                             case 1:
+                                selected[5]++;
                                 StartCoroutine("tamaBath");
                                 break;
 
                             // ギター
                             case 2:
+                                selected[6]++;
                                 StartCoroutine("tamaGuitar");
                                 break;
 
                             // 通報
                             case 3:
+                                selected[7]++;
                                 StartCoroutine("tamaTuho");
                                 break;
 
@@ -204,26 +217,31 @@ public class GameDirector : MonoBehaviour
                         {
                             // 納豆
                             case 0:
+                                selected[0]++;
                                 StartCoroutine("tamaNatto");
                                 break;
 
                             // ラーメン
                             case 1:
+                                selected[1]++;
                                 StartCoroutine("tamaRamen");
                                 break;
 
                             // 寿司
                             case 2:
+                                selected[2]++;
                                 StartCoroutine("tamaSushi");
                                 break;
 
                             // ウナギ弁当
                             case 3:
+                                selected[3]++;
                                 StartCoroutine("tamaUnagi");
                                 break;
 
                             // プラモデル
                             case 4:
+                                selected[4]++;
                                 StartCoroutine("tamaPramo");
                                 break;
 
@@ -530,18 +548,81 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // 変身モーション
+        // 変身モーション（本体ブルブル）
         henshin.GetComponent<Renderer>().sortingOrder = 5;
         animatorHenshin.SetTrigger("start");
         yield return new WaitForSeconds(7.0f);
 
         // 最終形態の表示
-        last.transform.localScale = new Vector2(0.0f, 0.0f);
-        last.GetComponent<Renderer>().sortingOrder = 6;
-        for(float scale=0.0f; scale <= 1.1f; scale += 0.1f)
+        // プラモ以外を２回食べたら その８「真の姿」
+        if (selected[0] == 2 && selected[1] == 2 && selected[2] == 2 && selected[3] == 2 && selected[4] == 0)
         {
-            last.transform.localScale = new Vector2(scale, scale);
-            yield return new WaitForSeconds(0.1f);
+            // ズームして
+            last07.transform.localScale = new Vector2(0.0f, 0.0f);
+            last07.GetComponent<Renderer>().sortingOrder = 6;
+            for (float scale = 0.0f; scale <= 1.1f; scale += 0.1f)
+            {
+                last07.transform.localScale = new Vector2(scale, scale);
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            // ちょっと待って
+            yield return new WaitForSeconds(0.7f);
+            
+            // スクロール
+            for (int pos = 0; pos < 70; pos++)
+            {
+                last07.transform.Translate(0, 0.2f, 0, Space.World);
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+        // 通常の最終形態
+        else
+        {
+            // 一度でも通報されていたら その１
+            if (selected[7] > 0)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[0];
+            }
+            // ギター３回なら その２
+            else if (selected[6] == 3)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[1];
+            }
+            // 納豆ばかりで満腹なら その５
+            else if (selected[0] > 5 && selected[1] == 0 && selected[2] == 0 && selected[3] == 0 && selected[4] == 0)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[4];
+            }
+            // ラーメンばかりで満腹なら その７
+            else if(selected[0] ==0 && selected[1] > 5 && selected[2] == 0 && selected[3] == 0 && selected[4] == 0)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[6];
+            }
+            // お風呂３回以上なら その６
+            else if (selected[5] >= 3)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[5];
+            }
+            // プラモ２回以上なら その３
+            else if (selected[4] >= 2)
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[2];
+            }
+            // それ以外なら その４
+            else
+            {
+                last.GetComponent<SpriteRenderer>().sprite = last_form[3];
+            }
+
+            // ズームして表示
+            last.transform.localScale = new Vector2(0.0f, 0.0f);
+            last.GetComponent<Renderer>().sortingOrder = 6;
+            for (float scale = 0.0f; scale <= 1.1f; scale += 0.1f)
+            {
+                last.transform.localScale = new Vector2(scale, scale);
+                yield return new WaitForSeconds(0.1f);
+            }
         }
 
         // 図鑑ともう一回ボタンの表示
