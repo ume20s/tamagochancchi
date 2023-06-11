@@ -6,6 +6,7 @@ public class CommentDirector : MonoBehaviour
 {
     // ゲームオブジェクト
     GameObject commentary;
+    GameObject trueTamago;
 
     // アニメーター
     Animator animatorComment;
@@ -15,12 +16,13 @@ public class CommentDirector : MonoBehaviour
     {
         // オブジェクトの取得
         commentary = GameObject.Find("commentary");
+        trueTamago = GameObject.Find("trueTamago");
 
         // アニメーターコンポーネントの取得
         animatorComment = commentary.GetComponent<Animator>();
 
         // アニメーショントリガの設定
-        switch(dt.KaiTama)
+        switch (dt.KaiTama)
         {
             case 0:
                 animatorComment.SetTrigger("sono1Trigger");
@@ -44,10 +46,22 @@ public class CommentDirector : MonoBehaviour
                 animatorComment.SetTrigger("sono7Trigger");
                 break;
             case 7:
-                animatorComment.SetTrigger("sono8Trigger");
+                StartCoroutine("tamaScroll");
                 break;
             default:
                 break;
         }
+    }
+
+    // 真のたまごちゃんスクロール
+    IEnumerator tamaScroll()
+    {
+        for(int pos = 0; pos <=268; pos++)
+        {
+            trueTamago.transform.Translate(0, 0.05f, 0, Space.World);
+            yield return new WaitForSeconds(0.01f);
+        }
+        trueTamago.SetActive(false);
+        animatorComment.SetTrigger("sono8Trigger");
     }
 }
