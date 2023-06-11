@@ -60,8 +60,14 @@ public class GameDirector : MonoBehaviour
         animatorTama = tama.GetComponent<Animator>();
         animatorHenshin = henshin.GetComponent<Animator>();
 
+        // クリアたまごちゃんデータの読み込み
+        for(int i=0; i<8; i++)
+        {
+            dt.clearTamago[i] = PlayerPrefs.GetInt(dt.SAVE_KEY[i], 0);
+        }
+
         // カーソル表示の初期化
-        for(int i=0; i<5; i++)
+        for (int i=0; i<5; i++)
         {
             cursor[i].SetActive(false);
         }
@@ -557,6 +563,9 @@ public class GameDirector : MonoBehaviour
         // プラモ以外を２回食べたら その８「真の姿」
         if (selected[0] == 2 && selected[1] == 2 && selected[2] == 2 && selected[3] == 2 && selected[4] == 0)
         {
+            // クリアたまごちゃん保存
+            saveData(7);
+
             // ズームして
             last07.transform.localScale = new Vector2(0.0f, 0.0f);
             last07.GetComponent<Renderer>().sortingOrder = 6;
@@ -582,36 +591,43 @@ public class GameDirector : MonoBehaviour
             // 一度でも通報されていたら その１
             if (selected[7] > 0)
             {
+                saveData(0);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[0];
             }
             // ギター３回なら その２
             else if (selected[6] == 3)
             {
+                saveData(1);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[1];
             }
             // 納豆ばかりで満腹なら その５
             else if (selected[0] > 5 && selected[1] == 0 && selected[2] == 0 && selected[3] == 0 && selected[4] == 0)
             {
+                saveData(4);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[4];
             }
             // ラーメンばかりで満腹なら その７
             else if(selected[0] ==0 && selected[1] > 5 && selected[2] == 0 && selected[3] == 0 && selected[4] == 0)
             {
+                saveData(6);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[6];
             }
             // お風呂３回以上なら その６
             else if (selected[5] >= 3)
             {
+                saveData(5);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[5];
             }
             // プラモ２回以上なら その３
             else if (selected[4] >= 2)
             {
+                saveData(2);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[2];
             }
             // それ以外なら その４
             else
             {
+                saveData(3);
                 last.GetComponent<SpriteRenderer>().sprite = last_form[3];
             }
 
@@ -628,5 +644,16 @@ public class GameDirector : MonoBehaviour
         // 図鑑ともう一回ボタンの表示
         button_Z.SetActive(true);
         button_R.SetActive(true);
+    }
+
+    // クリアたまごちゃん保存
+    private void saveData(int TamaNum)
+    {
+        // 変数設定
+        dt.clearTamago[TamaNum] = 1;
+
+        // ストレージに出力保存
+        PlayerPrefs.SetInt(dt.SAVE_KEY[TamaNum], dt.clearTamago[TamaNum]);
+        PlayerPrefs.Save();
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ZukanScene.unity
     guid: 908cf451a39c8b5499036919eb947baa
+  - enabled: 1
+    path: Assets/CommentScene.unity
+    guid: 533e0c3077a9e9e4897654c806d60950
   m_configObjects: {}
