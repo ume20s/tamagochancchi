@@ -37,6 +37,12 @@ public class GameDirector : MonoBehaviour
     Animator animatorTama;
     Animator animatorHenshin;
 
+    // 音声関連
+    AudioSource audioSource;
+    public AudioClip seFuka;
+    public AudioClip seNatto;
+    public AudioClip seRamen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,8 +66,11 @@ public class GameDirector : MonoBehaviour
         animatorTama = tama.GetComponent<Animator>();
         animatorHenshin = henshin.GetComponent<Animator>();
 
+        // 音声のコンポーネントを取得
+        audioSource = GetComponent<AudioSource>();
+
         // クリアたまごちゃんデータの読み込み
-        for(int i=0; i<8; i++)
+        for (int i=0; i<8; i++)
         {
             dt.clearTamago[i] = PlayerPrefs.GetInt(dt.SAVE_KEY[i], 0);
         }
@@ -359,7 +368,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seNatto);
         animatorTama.SetTrigger("nattoTrigger");
         yield return new WaitForSeconds(6.5f);
 
@@ -377,7 +387,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seRamen);
         animatorTama.SetTrigger("ramenTrigger");
         yield return new WaitForSeconds(4.0f);
 
