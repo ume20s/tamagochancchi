@@ -42,6 +42,15 @@ public class GameDirector : MonoBehaviour
     public AudioClip seFuka;
     public AudioClip seNatto;
     public AudioClip seRamen;
+    public AudioClip seSushi;
+    public AudioClip seUnagi;
+    public AudioClip sePramo;
+    public AudioClip seIyaiya;
+    public AudioClip seBath;
+    public AudioClip seGuitar;
+    public AudioClip seTuho;
+    public AudioClip seReset;
+
 
     // Start is called before the first frame update
     void Start()
@@ -351,6 +360,9 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
+        // 効果音
+        audioSource.PlayOneShot(seFuka);
+
         // 孵化アニメのウエイト
         yield return new WaitForSeconds(9.0f);
 
@@ -409,7 +421,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seSushi);
         animatorTama.SetTrigger("sushiTrigger");
         yield return new WaitForSeconds(3.3f);
 
@@ -430,7 +443,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seUnagi);
         animatorTama.SetTrigger("unagiTrigger");
         yield return new WaitForSeconds(3.66f);
 
@@ -451,7 +465,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(sePramo);
         animatorTama.SetTrigger("pramoTrigger");
         yield return new WaitForSeconds(4.0f);
 
@@ -472,7 +487,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seIyaiya);
         animatorTama.SetTrigger("iyaiyaTrigger");
         yield return new WaitForSeconds(3.0f);
 
@@ -486,7 +502,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seBath);
         animatorTama.SetTrigger("bathTrigger");
         yield return new WaitForSeconds(3.0f);
 
@@ -500,7 +517,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seGuitar);
         animatorTama.SetTrigger("guitarTrigger");
         yield return new WaitForSeconds(3.0f);
 
@@ -514,7 +532,8 @@ public class GameDirector : MonoBehaviour
         // タップ不可
         isTappable = false;
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seTuho);
         animatorTama.SetTrigger("tuhoTrigger");
         yield return new WaitForSeconds(5.0f);
 
@@ -542,7 +561,8 @@ public class GameDirector : MonoBehaviour
         manpukuRate = 0;
         s_guage.GetComponent<SpriteRenderer>().sprite = s_disp[manpukuRate];
 
-        // アニメ遷移してウェイト
+        // 効果音とアニメ遷移してウェイト
+        audioSource.PlayOneShot(seReset);
         animatorTama.SetTrigger("resetTrigger");
         tama_reset.SetActive(false);
         yield return new WaitForSeconds(12.0f);
