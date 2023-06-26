@@ -14,6 +14,7 @@ public class CommentDirector : MonoBehaviour
 
     // 音声関連
     AudioSource audioSource;
+    public AudioClip seZukanPnl;
     public AudioClip seKirakira;
 
     // Start is called before the first frame update
@@ -24,14 +25,17 @@ public class CommentDirector : MonoBehaviour
         trueTamago = GameObject.Find("trueTamago");
         kirakira = GameObject.Find("kirakira");
 
-        // キラキラ非表示
-        kirakira.SetActive(false);
+        // 音声コンポーネントの取得
+        audioSource = GetComponent<AudioSource>();
 
         // アニメーターコンポーネントの取得
         animatorComment = commentary.GetComponent<Animator>();
 
-        // 音声のコンポーネントを取得
-        audioSource = GetComponent<AudioSource>();
+        // キラキラ非表示
+        kirakira.SetActive(false);
+
+        // 効果音
+        StartCoroutine("pnlTapSE");
 
         // アニメーショントリガの設定
         switch (dt.KaiTama)
@@ -63,6 +67,13 @@ public class CommentDirector : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    // あたかも図鑑パネルをタップしてすぐの効果音のように見せかける
+    IEnumerator pnlTapSE()
+    {
+        yield return new WaitForSeconds(0.01f);
+        audioSource.PlayOneShot(seZukanPnl);
     }
 
     // 真のたまごちゃんスクロール
