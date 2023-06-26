@@ -1695,7 +1695,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a933092cb3926245b2df3426a76087f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2396,6 +2396,10 @@ MonoBehaviour:
   seGuitar: {fileID: 8300000, guid: b26605c3ad3afc5419fac8366cf32f3d, type: 3}
   seTuho: {fileID: 8300000, guid: 5d8646ca8f25fd9479796a117db14044, type: 3}
   seReset: {fileID: 8300000, guid: 7cfb01f5c3bd53846ae237b6091db1a4, type: 3}
+  seHenshin: {fileID: 8300000, guid: e09000cc25ba8674a944e5cf9c590283, type: 3}
+  seZoom: {fileID: 8300000, guid: cbca2e2af6fb70649a401d8d6a1964cd, type: 3}
+  seZoomT: {fileID: 8300000, guid: fbe4d989d90f697428ea90faa2ab3d1d, type: 3}
+  seKirakira: {fileID: 8300000, guid: 249c195060fa1c64692b53d48c8c1159, type: 3}
 --- !u!4 &1582967848
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ public class CommentDirector : MonoBehaviour
     // アニメーター
     Animator animatorComment;
 
+    // 音声関連
+    AudioSource audioSource;
+    public AudioClip seKirakira;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,9 @@ public class CommentDirector : MonoBehaviour
 
         // アニメーターコンポーネントの取得
         animatorComment = commentary.GetComponent<Animator>();
+
+        // 音声のコンポーネントを取得
+        audioSource = GetComponent<AudioSource>();
 
         // アニメーショントリガの設定
         switch (dt.KaiTama)
@@ -65,10 +72,11 @@ public class CommentDirector : MonoBehaviour
         kirakira.SetActive(true);
 
         // スクロール
-        for(int pos = 0; pos <=268; pos++)
+        audioSource.PlayOneShot(seKirakira);
+        for (int pos = 0; pos <=268; pos++)
         {
             trueTamago.transform.Translate(0, 0.05f, 0, Space.World);
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.02f);
         }
 
         // スクロール用真たまとキラキラ非表示

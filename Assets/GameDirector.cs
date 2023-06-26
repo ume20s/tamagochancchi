@@ -50,6 +50,10 @@ public class GameDirector : MonoBehaviour
     public AudioClip seGuitar;
     public AudioClip seTuho;
     public AudioClip seReset;
+    public AudioClip seHenshin;
+    public AudioClip seZoom;
+    public AudioClip seZoomT;
+    public AudioClip seKirakira;
 
 
     // Start is called before the first frame update
@@ -587,6 +591,7 @@ public class GameDirector : MonoBehaviour
 
         // 変身モーション（本体ブルブル）
         henshin.GetComponent<Renderer>().sortingOrder = 5;
+        audioSource.PlayOneShot(seHenshin);
         animatorHenshin.SetTrigger("start");
         yield return new WaitForSeconds(7.0f);
 
@@ -600,6 +605,7 @@ public class GameDirector : MonoBehaviour
             // ズームして
             last07.transform.localScale = new Vector2(0.0f, 0.0f);
             last07.GetComponent<Renderer>().sortingOrder = 6;
+            audioSource.PlayOneShot(seZoomT);
             for (float scale = 0.0f; scale <= 1.1f; scale += 0.1f)
             {
                 last07.transform.localScale = new Vector2(scale, scale);
@@ -608,12 +614,13 @@ public class GameDirector : MonoBehaviour
 
             // ちょっと待って
             yield return new WaitForSeconds(0.7f);
-            
+
             // スクロール
+            audioSource.PlayOneShot(seKirakira);
             for (int pos = 0; pos < 70; pos++)
             {
                 last07.transform.Translate(0, 0.2f, 0, Space.World);
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.09f);
             }
         }
         // 通常の最終形態
@@ -665,6 +672,7 @@ public class GameDirector : MonoBehaviour
             // ズームして表示
             last.transform.localScale = new Vector2(0.0f, 0.0f);
             last.GetComponent<Renderer>().sortingOrder = 6;
+            audioSource.PlayOneShot(seZoom);
             for (float scale = 0.0f; scale <= 1.1f; scale += 0.1f)
             {
                 last.transform.localScale = new Vector2(scale, scale);
